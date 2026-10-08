@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Host: https://grafick.space
+Sitemap: https://grafick.space/sitemap.xml

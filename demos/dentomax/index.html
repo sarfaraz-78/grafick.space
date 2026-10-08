@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dentomax Malakpet | Painless Dentist Chanchalguda, Hyderabad</title>
+<meta name="description" content="Dentomax Malakpet, Hyderabad — Painless Root Canals · Implants · Braces — Chanchalguda. Mon–Sat 10AM–9PM, Sun closed. Call 089850 30484.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10233B;
+  --mint:#D9F2EB;
+  --mint-deep:#0E7C66;
+  --mint-deep-dark:#0A5C4C;
+  --paper:#FBFDFC;
+  --amber:#F5A524;
+  --line:#CBE3DA;
+  --ink-soft:#33475F;
+  --muted:#5B6E84;
+  --font-display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --font-hand:"Caveat",cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--mint-deep)}
+::selection{background:var(--mint)}
+:focus-visible{outline:3px solid var(--mint-deep);outline-offset:3px;border-radius:4px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  background:var(--ink);color:#EAF3EF;
+  font-size:12.5px;letter-spacing:.02em;
+  padding:8px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.topbar span{white-space:nowrap}
+.topbar .dot{opacity:.5;margin:0 8px}
+.topbar a{color:#fff;text-decoration:none;font-weight:600}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,253,252,.96);backdrop-filter:blur(8px);
+  border-bottom:1.5px solid var(--ink);
+}
+.header-inner{
+  max-width:1140px;margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand-mark{
+  width:42px;height:42px;flex:none;
+  border:2px solid var(--ink);border-radius:50%;
+  display:grid;place-items:center;background:var(--mint);
+}
+.brand-mark svg{width:22px;height:22px;stroke:var(--ink)}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:19px;line-height:1.15;letter-spacing:-.01em}
+.brand-sub{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mint-deep);font-weight:700}
+.nav-desktop{display:flex;gap:26px;align-items:center}
+.nav-desktop a{color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500}
+.nav-desktop a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;
+  border-radius:999px;padding:13px 26px;min-height:48px;
+  border:2px solid var(--ink);cursor:pointer;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:active{transform:translateY(2px)}
+.btn-call{background:var(--mint-deep);border-color:var(--mint-deep);color:#fff}
+.btn-call:hover{background:var(--mint-deep-dark);border-color:var(--mint-deep-dark)}
+.btn-wa{background:#fff;color:var(--ink)}
+.btn-wa:hover{background:var(--mint)}
+.btn-header{padding:10px 22px;min-height:44px;font-size:14px}
+.hamburger{display:none;background:none;border:2px solid var(--ink);border-radius:10px;width:46px;height:44px;cursor:pointer;place-items:center}
+.hamburger svg{width:22px;height:22px;stroke:var(--ink)}
+.drawer{display:none;border-top:1.5px solid var(--ink);background:var(--paper);padding:8px 22px 20px}
+.drawer.open{display:block}
+.drawer a.dlink{display:block;padding:13px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;font-size:16px}
+.drawer .btn{width:100%;margin-top:12px}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+main{display:flex;flex-direction:column}
+#pain-strip{order:1}
+#treatments{order:2}
+
+/* ---------- hero ---------- */
+.hero{border-bottom:1.5px solid var(--ink);background:var(--paper)}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:44px;
+  padding:46px 0 52px;align-items:center;
+}
+.kicker{
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mint-deep);
+  display:flex;align-items:center;gap:10px;margin-bottom:16px;
+}
+.kicker::after{content:"";height:1.5px;flex:1;background:var(--ink);opacity:.9;max-width:220px}
+.hero h1{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(38px,4.6vw,60px);line-height:1.08;letter-spacing:-.02em;
+  margin-bottom:14px;
+}
+.hero h1 em{font-style:italic;font-weight:600}
+.hero-sub{font-size:17px;color:var(--ink-soft);max-width:34rem;line-height:1.55;margin-bottom:18px}
+.hero-sub strong{color:var(--ink)}
+
+/* stamp badge */
+.stamp{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--amber);color:var(--ink);
+  border:2px solid var(--ink);border-radius:999px;
+  font-weight:700;font-size:14px;letter-spacing:.01em;
+  padding:9px 18px;margin:6px 0 20px;
+  transform:rotate(-2.5deg);
+  box-shadow:2px 2px 0 var(--ink);
+}
+.stamp .star{font-size:16px;line-height:1}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.hand-note{
+  font-family:var(--font-hand);font-size:24px;color:var(--mint-deep);
+  transform:rotate(-2deg);margin-top:10px;
+}
+.hand-note small{display:block;font-family:var(--font-body);font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.hours-line{margin-top:14px;font-size:14px;font-weight:600;border-top:1px dashed var(--ink);padding-top:12px;display:inline-block}
+.hours-line span{font-weight:400;color:var(--ink-soft)}
+
+/* photo card */
+.photo-card{
+  background:var(--mint);border:2px solid var(--ink);border-radius:20px;
+  padding:12px 12px 16px;
+  box-shadow:6px 6px 0 var(--ink);
+}
+.photo-frame{
+  border-radius:12px;overflow:hidden;background:var(--mint-deep);
+  aspect-ratio:4/3;position:relative;
+}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-cap{
+  display:flex;justify-content:space-between;gap:10px;align-items:baseline;
+  padding:12px 8px 2px;font-size:13px;
+}
+.photo-cap strong{font-family:var(--font-display);font-size:14.5px}
+.photo-cap span{color:var(--ink-soft);font-size:12.5px}
+
+/* ---------- pain strip ---------- */
+.pain{background:var(--ink);color:#fff}
+.pain-inner{
+  display:flex;align-items:center;gap:18px;justify-content:space-between;flex-wrap:wrap;
+  padding:20px 0;
+}
+.pain p{font-family:var(--font-display);font-size:clamp(17px,2.2vw,22px);letter-spacing:-.01em}
+.pain p strong{font-style:italic}
+.pain-note{font-size:13.5px;opacity:.85}
+.pain .btn{border-color:#fff;background:transparent;color:#fff;min-height:46px}
+.pain .btn:hover{background:#fff;color:var(--ink)}
+
+/* ---------- section headers (ruled journal) ---------- */
+.sec{padding:56px 0;border-bottom:1.5px solid var(--ink)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sec-no{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--mint-deep);white-space:nowrap}
+.sec-head h2{font-family:var(--font-display);font-size:clamp(26px,3.2vw,36px);letter-spacing:-.015em;line-height:1.15;white-space:nowrap}
+.rule{flex:1;height:1.5px;background:var(--ink);position:relative;min-width:40px}
+.rule::after{content:"";position:absolute;right:0;top:-3.5px;width:8px;height:8px;background:var(--paper);border:1.5px solid var(--ink);border-radius:50%}
+.sec-lede{color:var(--ink-soft);font-size:15.5px;max-width:44rem;margin-bottom:26px}
+
+/* ---------- treatments ---------- */
+.price-list{border:2px solid var(--ink);border-radius:16px;overflow:hidden;background:#fff}
+.price-row{
+  display:grid;grid-template-columns:1fr auto;gap:6px 18px;
+  padding:17px 22px;border-bottom:1px solid var(--line);align-items:center;
+}
+.price-row:last-child{border-bottom:none}
+.price-row:nth-child(even){background:#F2FAF7}
+.price-name{font-weight:700;font-size:16.5px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price-name .rs{font-family:var(--font-display);font-size:18px;color:var(--mint-deep);white-space:nowrap}
+.price-note{font-size:14px;color:var(--ink-soft);grid-column:1}
+.price-ask{grid-row:1/3;grid-column:2;font-size:13.5px;font-weight:700;white-space:nowrap;text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:9px 16px;color:var(--ink);background:var(--paper);min-height:44px;display:inline-flex;align-items:center}
+.price-ask:hover{background:var(--mint)}
+
+/* ---------- checklist ---------- */
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.check-card{border:2px solid var(--ink);border-radius:16px;background:#fff;padding:28px;box-shadow:5px 5px 0 var(--mint)}
+.check-card h3{font-family:var(--font-display);font-size:22px;margin-bottom:6px;letter-spacing:-.01em}
+.check-card p{font-size:14.5px;color:var(--ink-soft);margin-bottom:18px}
+.check-list{list-style:none;display:grid;gap:14px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.tick{flex:none;width:28px;height:28px;border-radius:50%;background:var(--mint-deep);display:grid;place-items:center;margin-top:1px}
+.tick svg{width:15px;height:15px;stroke:#fff;stroke-width:3;fill:none}
+.check-list strong{display:block;font-size:15.5px}
+.check-list span{color:var(--ink-soft);font-size:14px}
+.journal-aside{border:2px dashed var(--ink);border-radius:16px;padding:28px;background:var(--mint)}
+.journal-aside h3{font-family:var(--font-display);font-size:21px;margin-bottom:10px}
+.journal-aside ol{margin-left:20px;display:grid;gap:10px;font-size:15px;color:var(--ink)}
+.journal-aside li::marker{color:var(--mint-deep);font-weight:700}
+.journal-aside .hand-note{font-size:22px;margin-top:16px}
+.aside-note{font-size:14px;font-weight:600;color:var(--mint-deep);margin-top:16px;border-top:1px dashed var(--ink);padding-top:10px}
+
+/* ---------- reviews ---------- */
+.reviews-band{background:var(--mint);border:2px solid var(--ink);border-radius:18px;padding:30px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:26px}
+.big-score{font-family:var(--font-display);font-size:56px;font-weight:700;line-height:1;letter-spacing:-.02em}
+.reviews-band .meta{font-size:14.5px}
+.reviews-band .meta strong{font-size:16px}
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+blockquote{background:#fff;border:1.5px solid var(--ink);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:12px}
+blockquote .stars{color:var(--mint-deep);font-weight:700;letter-spacing:.15em;font-size:13px}
+blockquote p{font-family:var(--font-display);font-size:16.5px;line-height:1.5}
+blockquote footer{font-size:13.5px;color:var(--muted);margin-top:auto}
+.read-link{display:inline-block;margin-top:18px;font-weight:700}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
+.visit-card{border:2px solid var(--ink);border-radius:16px;padding:30px;background:#fff}
+.visit-card address{font-style:normal;font-size:16.5px;line-height:1.65;margin:12px 0 8px}
+.visit-card .closed{font-weight:700;background:var(--mint);border:1.5px solid var(--ink);border-radius:10px;padding:10px 14px;display:inline-block;margin:10px 0 18px;font-size:14.5px}
+.visit-btns{display:flex;gap:12px;flex-wrap:wrap}
+.map-card{border:2px solid var(--ink);border-radius:16px;background:var(--ink);color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.map-card h3{font-family:var(--font-display);font-size:23px}
+.map-card p{font-size:14.5px;opacity:.85}
+.map-card .btn{border-color:#fff}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#EAF3EF;padding:40px 0 110px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:26px}
+footer h3{font-family:var(--font-display);font-size:22px;margin-bottom:8px}
+footer p,footer a{font-size:14.5px;color:#D7E5DE}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.foot-tag{font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.grafick{margin-top:18px;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;font-size:13.5px;opacity:.9}
+
+/* ---------- sticky mobile bar ---------- */
+.sticky-bar{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--paper);border-top:2px solid var(--ink);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap:10px;
+}
+.sticky-bar a{flex:1;text-align:center;padding:14px 10px;font-size:16px}
+
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:26px;padding:30px 0 40px}
+  .hero-photo{order:-1}
+  .check-grid,.visit-grid,.foot-grid{grid-template-columns:1fr}
+  .quote-grid{grid-template-columns:1fr}
+  .nav-desktop{display:none}
+  .hamburger{display:grid}
+  .sec-head h2{white-space:normal}
+}
+@media(max-width:720px){
+  /* price list first on mobile: treatments above pain strip */
+  #pain-strip{order:2}
+  #treatments{order:1}
+  .price-row{grid-template-columns:1fr;padding:15px 18px}
+  .price-ask{grid-row:auto;grid-column:1;justify-self:start;margin-top:6px}
+  .sticky-bar{display:flex}
+  .sec{padding:40px 0}
+  .hero h1{font-size:36px}
+  .topbar{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" data-od-id="topbar">
+  <span>Officers Colony, Chanchalguda</span>
+  <span>Mon–Sat 10AM–9PM <span class="dot">·</span> Sun closed</span>
+</div>
+
+<header class="site-header" data-od-id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" data-od-id="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">Dentomax Malakpet, Hyderabad</span><br>
+        <span class="brand-sub">Painless Root Canals · Implants · Braces — Chanchalguda</span>
+      </span>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary" data-od-id="nav-desktop">
+      <a href="#treatments">Treatments</a>
+      <a href="#sterilization">Sterilization</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-call btn-header" href="tel:+918985030484" data-od-id="header-call">Call 089850 30484</a>
+    </nav>
+    <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false" data-od-id="menu-button">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Mobile" data-od-id="mobile-drawer">
+    <a class="dlink" href="#treatments">Treatments &amp; prices</a>
+    <a class="dlink" href="#sterilization">Sterilization</a>
+    <a class="dlink" href="#reviews">Reviews</a>
+    <a class="dlink" href="#visit">Visit us</a>
+    <a class="btn btn-call" href="tel:+918985030484" data-od-id="drawer-call">Call 089850 30484</a>
+    <a class="btn btn-wa" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem." data-od-id="drawer-whatsapp">WhatsApp the clinic</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-od-id="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker" data-od-id="hero-kicker">Dentomax Malakpet, Hyderabad — Chanchalguda clinic notes</p>
+        <h1 data-od-id="hero-headline">Root canals that <em>feel like fillings.</em></h1>
+        <p class="hero-sub"><strong>Dentomax Malakpet, Hyderabad</strong> — Painless Root Canals · Implants · Braces — Chanchalguda. Gentle anesthesia, microscope-assisted canals, and honest estimates before we begin.</p>
+        <div class="stamp" data-od-id="hero-rating-badge"><span class="star" aria-hidden="true">★</span> 4.8 ★ · 414 Google reviews · painless-first clinic</div>
+        <div class="hero-cta" data-od-id="hero-cta">
+          <a class="btn btn-call" href="tel:+918985030484" data-od-id="hero-call">Call 089850 30484</a>
+          <a class="btn btn-wa" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem." data-od-id="hero-whatsapp">WhatsApp the clinic</a>
+        </div>
+        <p class="hand-note" data-od-id="hero-handnote">“root canals feel like fillings here!” <small>— what patients keep telling us</small></p>
+        <p class="hours-line" data-od-id="hero-hours">Mon–Sat 10AM–9PM · Sun closed <span>— walk-ins welcome on weekdays</span></p>
+      </div>
+      <div class="hero-photo">
+        <figure class="photo-card" data-od-id="hero-photo-card">
+          <div class="photo-frame">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Dental treatment suite with modern dental chair" loading="eager" onerror="this.style.display='none'">
+          </div>
+          <figcaption class="photo-cap"><strong>Fig. 01 — Treatment suite</strong><span>Gentle, unhurried appointments</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN STRIP -->
+  <section class="pain" id="pain-strip" data-od-id="pain-strip">
+    <div class="wrap pain-inner">
+      <p>Toothache? Swelling? Wisdom tooth? <strong>— same-week slots Mon–Sat.</strong></p>
+      <a class="btn" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem." data-od-id="pain-whatsapp">Describe your pain on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section class="sec" id="treatments" data-od-id="treatments">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">Entry 01</span>
+        <h2>Treatments &amp; honest prices</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <p class="sec-lede">Pinned to the board so there are no surprises. Final plan confirmed after an in-chair checkup — message us to ask about any treatment.</p>
+      <div class="price-list" data-od-id="price-list">
+        <div class="price-row" data-od-id="price-cleaning">
+          <div class="price-name">Cleaning &amp; Polishing <span class="rs">Rs 499</span></div>
+          <p class="price-note">Quick 30-minute sitting that lifts stains and tartar.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Cleaning%20Rs%20499.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-filling">
+          <div class="price-name">Tooth Filling <span class="rs">Rs 999</span></div>
+          <p class="price-note">Tooth-coloured filling for cavities and small chips.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Filling%20Rs%20999.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-rct">
+          <div class="price-name">Painless Root Canal <span class="rs">Rs 4,999</span></div>
+          <p class="price-note">Single-tooth rotary canal with proper numbing first.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Root%20Canal%20Rs%204999.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-crown">
+          <div class="price-name">Dental Crown <span class="rs">Rs 5,999</span></div>
+          <p class="price-note">Strong cap that protects a root-canal treated tooth.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Crown%20Rs%205999.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-implant">
+          <div class="price-name">Dental Implant <span class="rs">Rs 19,999</span></div>
+          <p class="price-note">Fixed replacement for a missing tooth, planned on X-ray.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Implant%20Rs%2019999.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-braces">
+          <div class="price-name">Braces / Aligners <span class="rs">Rs 24,999</span></div>
+          <p class="price-note">Straightening plan with monthly review visits.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Braces%20Rs%2024999.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-extraction">
+          <div class="price-name">Tooth Extraction <span class="rs">Rs 1,499</span></div>
+          <p class="price-note">Gentle removal including most wisdom-tooth cases.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Extraction%20Rs%201499.">Ask on WhatsApp</a>
+        </div>
+        <div class="price-row" data-od-id="price-whitening">
+          <div class="price-name">Teeth Whitening <span class="rs">Rs 7,999</span></div>
+          <p class="price-note">Single-visit brightening for weddings and events.</p>
+          <a class="price-ask" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20want%20to%20ask%20about%20Whitening%20Rs%207999.">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STERILIZATION -->
+  <section class="sec" id="sterilization" data-od-id="sterilization">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">Entry 02</span>
+        <h2>Sterilization, logged daily</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <p class="sec-lede">The part you never see matters most. Every instrument cycle is written into the day book before the chair is reset.</p>
+      <div class="check-grid">
+        <div class="check-card" data-od-id="sterilization-checklist">
+          <h3>Chair-side checklist</h3>
+          <p>Ticked off between every single patient, Mon–Sat.</p>
+          <ul class="check-list">
+            <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12l5 5 11-11"/></svg></span><div><strong>Sealed pouches</strong><span>Instruments opened in front of you, never pre-laid.</span></div></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12l5 5 11-11"/></svg></span><div><strong>Autoclave cycle</strong><span>Steam-sterilized and logged after every use.</span></div></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12l5 5 11-11"/></svg></span><div><strong>Disposable gloves &amp; cups</strong><span>Fresh pair and fresh rinse cup for each visit.</span></div></li>
+            <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M4 12l5 5 11-11"/></svg></span><div><strong>Wiped-down chair</strong><span>Chair, lamp and tray disinfected before you sit.</span></div></li>
+          </ul>
+        </div>
+        <aside class="journal-aside" data-od-id="first-visit-note">
+          <h3>A first visit, in three lines</h3>
+          <ol>
+            <li>We listen to the pain, then take an X-ray only if needed.</li>
+            <li>You get a written plan with the exact price from the board.</li>
+            <li>Treatment starts only when you say yes — never rushed.</li>
+          </ol>
+          <p class="aside-note">Nervous? Tell us — we go slow.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec" id="reviews" data-od-id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">Entry 03</span>
+        <h2>What Chanchalguda says</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <p class="sec-lede">Unedited words from the Google register — 414 reviews and counting.</p>
+      <div class="reviews-band" data-od-id="reviews-badge">
+        <div class="big-score">4.8</div>
+        <div class="meta"><strong>★ · 414 Google reviews</strong><br>painless-first clinic, rated by real patients</div>
+        <div style="margin-left:auto"><a class="btn btn-call" href="https://www.google.com/maps/search/?api=1&query=Dentomax+Malakpet+Hyderabad" target="_blank" rel="noopener" data-od-id="read-reviews">Read 414 Google reviews</a></div>
+      </div>
+      <div class="quote-grid">
+        <blockquote data-od-id="review-anitha"><span class="stars">★★★★★</span><p>“Root canal done with zero pain. Doctor explained each step before starting.”</p><footer>— Anitha Rao, Chanchalguda</footer></blockquote>
+        <blockquote data-od-id="review-farhan"><span class="stars">★★★★★</span><p>“Took my father for an implant. Clean clinic, fixed price, no waiting.”</p><footer>— Mohammed Farhan, Malakpet</footer></blockquote>
+        <blockquote data-od-id="review-suresh"><span class="stars">★★★★★</span><p>“My daughter's braces cost was told upfront. Polite staff, honest work.”</p><footer>— Suresh Kumar, Yakutpura</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="sec" id="visit" data-od-id="visit">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-no">Entry 04</span>
+        <h2>Visit the clinic</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <p class="sec-lede">Two minutes from Malakpet station, inside Officers Colony.</p>
+      <div class="visit-grid">
+        <div class="visit-card" data-od-id="visit-address">
+          <p class="kicker">Find us here</p>
+          <address>H.No.16-8-2/A/2/1, Officers Colony,<br>Chanchalguda, Hyderabad,<br>Telangana 500024</address>
+          <p class="closed">Mon–Sat 10AM–9PM · Sun closed</p>
+          <div class="visit-btns">
+            <a class="btn btn-call" href="tel:+918985030484" data-od-id="visit-call">Call 089850 30484</a>
+            <a class="btn btn-wa" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem." data-od-id="visit-whatsapp">WhatsApp</a>
+          </div>
+        </div>
+        <div class="map-card" data-od-id="visit-directions">
+          <p class="kicker" style="color:var(--mint)">Landmark route</p>
+          <h3>Officers Colony → chair in 5 minutes</h3>
+          <p>Show the address to any auto driver, or open the live map and follow the pin to Dentomax Malakpet.</p>
+          <div class="visit-btns">
+            <a class="btn" style="background:#fff;border-color:#fff;color:var(--ink)" href="https://www.google.com/maps/search/?api=1&query=Dentomax+Malakpet+Hyderabad+500024" target="_blank" rel="noopener" data-od-id="get-directions">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer data-od-id="footer">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-tag">Painless Root Canals · Implants · Braces — Chanchalguda</p>
+      <h3>Dentomax Malakpet, Hyderabad</h3>
+      <p>H.No.16-8-2/A/2/1, Officers Colony, Chanchalguda, Hyderabad, Telangana 500024<br>
+      <a href="tel:+918985030484">089850 30484</a> · Mon–Sat 10AM–9PM · Sun closed</p>
+    </div>
+    <div>
+      <p class="foot-tag">Book a slot</p>
+      <p><a href="tel:+918985030484">Call the clinic</a> · <a href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem.">WhatsApp the clinic</a><br>
+      <a href="https://www.google.com/maps/search/?api=1&query=Dentomax+Malakpet+Hyderabad" target="_blank" rel="noopener">Read 414 Google reviews</a></p>
+    </div>
+  </div>
+  <div class="wrap grafick" data-od-id="footer-credit">Demo website crafted by <a href="tel:+917799507023">Grafick Signs Hyderabad</a></div>
+</footer>
+
+<div class="sticky-bar" data-od-id="sticky-bar">
+  <a class="btn btn-call" href="tel:+918985030484" data-od-id="sticky-call">Call now</a>
+  <a class="btn btn-wa" href="https://wa.me/918985030484?text=Hi%20Dentomax%20Malakpet%2C%20I%20have%20a%20tooth%20problem." data-od-id="sticky-whatsapp">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),drawer=document.getElementById('drawer');
+  btn.addEventListener('click',function(){
+    var open=drawer.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){drawer.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+})();
+</script>
+</body>
+</html>

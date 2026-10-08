@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J Brews Café · Madhapur — Coffee, Tea &amp; Conversation</title>
+<meta name="description" content="J Brews Café, Madhapur, Hyderabad — near Image Hospitals. Specialty coffee, cold drinks, comfort food and desserts, with free Wi-Fi and cozy seating. Rated 4.9 from 311 Google reviews. Call 091827 95936.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Tokens — sampled from the client reference, see brand-spec.md
+   ============================================================ */
+:root{
+  --bg:        oklch(17.3% 0.000 89.9);
+  --bg-deep:   oklch(13.4% 0.000 89.9);
+  --surface:   oklch(21.8% 0.004 84.6);
+  --surface-hi:oklch(28.8% 0.004 84.6);
+  --fg:        oklch(95.0% 0.010 81.8);
+  --muted:     oklch(76.6% 0.019 81.3);
+  --border:    oklch(95.0% 0.010 81.8 / .14);
+
+  --paper:     oklch(91.7% 0.031 81.8);
+  --paper-hi:  oklch(85.0% 0.031 81.8);
+  --paper-fg:  oklch(22.7% 0.025 68.7);
+  --paper-mut: oklch(46.0% 0.020 70.0);
+  --paper-bd:  oklch(22.7% 0.025 68.7 / .16);
+
+  --accent:    oklch(71.7% 0.136 63.5);
+  --accent-hi: oklch(81.6% 0.117 77.6);
+  --accent-lo: oklch(64.7% 0.136 63.5);
+
+  --ring: var(--fg);
+
+  --font-display:'Caveat','Segoe Script','Bradley Hand',cursive;
+  --font-body:'Karla','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --wrap:1180px;
+  --nav-h:74px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font-body);font-size:16.5px;line-height:1.65;
+  letter-spacing:0;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+section[id],footer[id],main[id]{scroll-margin-top:calc(var(--nav-h) + 14px)}
+.ph{display:block}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--paper);color:var(--bg);padding:12px 20px;border-radius:0 0 10px 0;font-weight:600}
+.skip:focus{left:0}
+
+/* ---------- shared type ---------- */
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;
+}
+.display{
+  font-family:var(--font-display);font-weight:700;line-height:1.18;letter-spacing:-.02em;
+  font-size:clamp(40px,5.6vw,62px);
+}
+.lede{margin-top:18px;color:var(--muted);font-size:17px;line-height:1.65;max-width:56ch}
+.swash{display:block;width:min(100%,320px);height:auto;margin-top:2px;color:var(--accent);overflow:visible}
+.swash path{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:48px;padding:12px 26px;border-radius:999px;
+  font-family:var(--font-body);font-size:15px;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;border:1.5px solid transparent;cursor:pointer;
+  transition:background .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease),color .2s var(--ease);
+}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.btn:active{transform:translateY(2px)}
+.btn-solid{background:var(--paper);color:var(--bg);border-color:var(--paper)}
+.btn-solid:hover{background:var(--paper-hi);border-color:var(--paper-hi)}
+.btn-dark{background:var(--bg);color:var(--fg);border-color:var(--bg)}
+.btn-dark:hover{background:var(--surface-hi);border-color:var(--surface-hi)}
+.btn-gold{background:var(--accent-hi);color:var(--bg);border-color:var(--accent-hi)}
+.btn-gold:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+.btn-ghost:hover{background:var(--surface);border-color:var(--fg)}
+.btn-sm{min-height:44px;padding:10px 20px;font-size:14px}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;height:var(--nav-h);
+  display:flex;align-items:center;
+  background:transparent;transition:background .3s var(--ease),border-color .3s var(--ease),backdrop-filter .3s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.is-stuck{background:oklch(17.3% 0.000 89.9 / .93);backdrop-filter:blur(14px);border-bottom-color:var(--border)}
+.nav-in{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px);display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;line-height:1;justify-self:start}
+.brand-mark{width:30px;height:30px;flex-shrink:0;color:var(--accent)}
+.brand-mark svg{width:100%;height:100%;display:block}
+.brand-txt{display:flex;flex-direction:column}
+.brand-name{display:block;font-family:var(--font-display);font-weight:700;font-size:29px;line-height:1.15;letter-spacing:-.01em;color:var(--accent)}
+.brand-sub{display:block;font-size:10.5px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--fg);margin-top:0;padding-left:3px}
+.nav-links{display:none;gap:30px;align-items:center;justify-self:center}
+.nav-links a{
+  position:relative;text-decoration:none;font-size:14.5px;font-weight:600;letter-spacing:.02em;
+  color:var(--muted);padding:6px 0;transition:color .2s var(--ease);
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;
+  background:var(--fg);transform:scaleX(0);transform-origin:left;transition:transform .24s var(--ease);
+}
+.nav-links a:hover,.nav-links a.is-active{color:var(--fg)}
+.nav-links a.is-active::after{transform:scaleX(1)}
+.nav-act{display:flex;align-items:center;gap:10px;justify-self:end}
+.nav-toggle{
+  display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;
+  background:transparent;border:1.5px solid var(--border);border-radius:999px;color:var(--fg);cursor:pointer;
+  transition:border-color .2s var(--ease),background .2s var(--ease);
+}
+.nav-toggle:hover{border-color:var(--fg);background:var(--surface)}
+.nav-toggle svg{width:20px;height:20px}
+.nav-toggle .ic-close{display:none}
+.nav-toggle[aria-expanded="true"] .ic-menu{display:none}
+.nav-toggle[aria-expanded="true"] .ic-close{display:block}
+@media(min-width:940px){
+  .nav-links{display:flex}
+  .nav-toggle{display:none}
+  .nav-in{grid-template-columns:1fr auto 1fr}
+}
+/* mobile drawer */
+.mnav{
+  position:fixed;top:var(--nav-h);left:0;right:0;z-index:59;
+  background:oklch(17.3% 0.000 89.9 / .98);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);padding:14px clamp(20px,5vw,40px) 26px;
+}
+.mnav[hidden]{display:none}
+.mnav a{
+  display:block;padding:14px 0;text-decoration:none;font-size:18px;font-weight:600;
+  color:var(--fg);border-bottom:1px solid var(--border);
+}
+.mnav a:last-child{border-bottom:0}
+.mnav .btn{margin-top:18px;width:100%}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;z-index:1;isolation:isolate;min-height:min(94vh,880px);display:flex;align-items:center;padding:calc(var(--nav-h) + 30px) 0 72px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.62) saturate(.92);z-index:-2}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(to top,var(--bg) 0%,oklch(13.4% 0.000 89.9 / .72) 20%,oklch(13.4% 0.000 89.9 / 0) 56%),
+    linear-gradient(102deg,oklch(8% 0 0 / .95) 0%,oklch(8% 0 0 / .9) 32%,oklch(8% 0 0 / .62) 60%,oklch(8% 0 0 / .45) 100%);
+}
+.hero-in{position:relative;display:grid;gap:34px}
+.hero-eyebrow{color:var(--fg);opacity:.9;margin-bottom:18px}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(52px,9vw,104px);line-height:1.14;letter-spacing:-.02em}
+.hero h1 .l2{display:block}
+.hero-sub{margin-top:24px;font-size:clamp(17px,2vw,20px);line-height:1.6;color:var(--fg);max-width:34ch}
+.hero-loc{display:flex;gap:10px;align-items:flex-start;margin-top:20px;color:var(--muted);font-size:15px;max-width:46ch}
+.hero-loc svg{width:18px;height:18px;flex-shrink:0;margin-top:3px;color:var(--fg)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-note{
+  position:absolute;right:0;bottom:-6px;text-align:right;
+  font-family:var(--font-display);font-weight:600;font-size:clamp(22px,2.4vw,30px);line-height:1.15;
+  color:var(--fg);text-shadow:0 2px 14px oklch(8% 0 0 / .9);transform:rotate(-4deg);
+  display:none;
+}
+.hero-note-em{position:relative;display:inline-block}
+.hero-note svg{width:20px;height:20px;display:block;margin:5px 2px 0 auto;color:var(--accent)}
+.scroll-cue{
+  display:none;align-items:center;gap:12px;text-decoration:none;
+  color:var(--muted);font-size:13.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  transition:color .2s var(--ease);
+}
+.scroll-cue:hover{color:var(--fg)}
+.scroll-cue .mouse{
+  width:24px;height:36px;border:1.6px solid currentColor;border-radius:14px;position:relative;flex-shrink:0;
+}
+.scroll-cue .mouse::after{
+  content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;
+  border-radius:2px;background:currentColor;animation:wheel 1.7s var(--ease) infinite;
+}
+@keyframes wheel{0%{opacity:0;transform:translateY(-3px)}35%{opacity:1}100%{opacity:0;transform:translateY(9px)}}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:1fr auto;align-items:end}
+  .hero-note{display:block;position:static;transform:rotate(-4deg) translateY(-14px);max-width:230px}
+  .scroll-cue{display:inline-flex;margin-top:46px}
+}
+
+/* ============================================================
+   BANDS + torn paper
+   ============================================================ */
+.band{position:relative;z-index:1;padding:clamp(76px,10vw,124px) 0}
+.band-deep{background:var(--bg-deep)}
+.band-paper{
+  position:relative;z-index:2;background-color:var(--paper);color:var(--paper-fg);
+  --ring:var(--paper-fg);
+  padding:clamp(84px,10vw,132px) 0;
+}
+.band-paper .eyebrow{color:var(--paper-mut)}
+.band-paper .lede{color:var(--paper-mut)}
+.band-paper .swash{color:var(--paper-fg)}
+.band-paper .btn-ghost{color:var(--paper-fg);border-color:var(--paper-bd)}
+.band-paper .btn-ghost:hover{background:oklch(22.7% 0.025 68.7 / .07);border-color:var(--paper-fg)}
+.torn::before,.torn::after{
+  content:"";position:absolute;left:0;right:0;height:26px;z-index:1;
+  background-color:var(--paper);background-image:var(--grain);background-size:150px 150px;
+  pointer-events:none;
+}
+.torn::before{
+  top:-26px;
+  clip-path:polygon(0% 100%,0% 64%,2% 78%,4.5% 52%,7% 70%,9.5% 44%,12% 66%,15% 48%,17.5% 72%,20% 50%,23% 68%,26% 42%,29% 64%,32% 52%,35% 74%,38% 46%,41% 66%,44% 40%,47% 62%,50% 54%,53% 76%,56% 48%,59% 68%,62% 44%,65% 64%,68% 52%,71% 72%,74% 46%,77% 66%,80% 42%,83% 60%,86% 52%,89% 74%,92% 48%,95% 66%,97.5% 54%,100% 70%,100% 100%);
+}
+.torn::after{
+  bottom:-26px;transform:scaleY(-1);
+  clip-path:polygon(0% 100%,0% 64%,2% 78%,4.5% 52%,7% 70%,9.5% 44%,12% 66%,15% 48%,17.5% 72%,20% 50%,23% 68%,26% 42%,29% 64%,32% 52%,35% 74%,38% 46%,41% 66%,44% 40%,47% 62%,50% 54%,53% 76%,56% 48%,59% 68%,62% 44%,65% 64%,68% 52%,71% 72%,74% 46%,77% 66%,80% 42%,83% 60%,86% 52%,89% 74%,92% 48%,95% 66%,97.5% 54%,100% 70%,100% 100%);
+}
+.grain{
+  position:absolute;inset:0;background-image:var(--grain);background-size:150px 150px;
+  opacity:.3;mix-blend-mode:multiply;pointer-events:none;
+}
+.band-paper > .wrap{position:relative;z-index:2}
+
+/* ---------- polaroid ---------- */
+.polaroid{
+  margin:0;background:#FBF7EF;padding:12px 12px 54px;
+  box-shadow:0 22px 44px oklch(8% 0 0 / .5),0 3px 10px oklch(8% 0 0 / .35);
+  position:relative;
+}
+.polaroid .ph{aspect-ratio:4/5;overflow:hidden;background:var(--surface)}
+.polaroid img{width:100%;height:100%;object-fit:cover;object-position:center}
+.polaroid figcaption{
+  position:absolute;left:16px;right:16px;bottom:12px;
+  font-family:var(--font-display);font-weight:600;font-size:20px;line-height:1.2;
+  color:oklch(22.7% 0.025 68.7);text-align:center;
+}
+.rot-l{transform:rotate(-2.6deg)}
+.rot-r{transform:rotate(2.4deg)}
+
+/* ============================================================
+   SIGNATURE (paper)
+   ============================================================ */
+.sig-grid{display:grid;gap:clamp(38px,5vw,64px)}
+.sig-photo{max-width:340px}
+.sig-body h2{font-family:var(--font-display);font-weight:700;font-size:clamp(38px,4.8vw,56px);line-height:1.18;letter-spacing:-.02em}
+.sig-body .btn{margin-top:26px}
+.sig-list{display:grid;gap:22px;align-content:start}
+.sig-list li{display:flex;gap:16px;align-items:flex-start}
+.sig-list .ic{
+  width:44px;height:44px;flex-shrink:0;display:grid;place-items:center;
+  color:var(--paper-fg);
+}
+.sig-list .ic svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sig-list b{display:block;font-size:16.5px;font-weight:700;letter-spacing:.01em}
+.sig-list span span{display:block;font-size:14.5px;color:var(--paper-mut);line-height:1.5}
+@media(min-width:760px){
+  .sig-grid{grid-template-columns:1fr 1.15fr;align-items:center}
+  .sig-list{grid-column:1 / -1;grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1060px){
+  .sig-grid{grid-template-columns:.85fr 1.1fr .8fr;align-items:center}
+  .sig-list{grid-column:auto;grid-template-columns:1fr;gap:26px;
+    border-left:1px solid var(--paper-bd);padding-left:clamp(24px,3vw,44px)}
+}
+
+/* ============================================================
+   MENU (dark)
+   ============================================================ */
+.menu-grid{display:grid;gap:clamp(34px,4vw,54px)}
+.menu-intro h2{font-family:var(--font-display);font-weight:700;font-size:clamp(38px,4.8vw,56px);line-height:1.18;letter-spacing:-.02em}
+.menu-intro .btn{margin-top:26px}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(158px,1fr))}
+.mcard{
+  position:relative;display:flex;flex-direction:column;text-decoration:none;
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  transition:transform .2s var(--ease),border-color .2s var(--ease),background .2s var(--ease);
+}
+.mcard:hover{transform:translateY(-5px);border-color:oklch(95% .01 81.8 / .34);background:var(--surface-hi)}
+.mcard .ph{aspect-ratio:4/3;overflow:hidden;background:var(--bg-deep)}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.mcard:hover .ph img{transform:scale(1.06)}
+.mcard-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+.mcard-body h3{font-size:16.5px;font-weight:700;letter-spacing:.01em}
+.mcard-body p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.mcard-go{
+  margin-top:14px;width:34px;height:34px;border-radius:50%;
+  border:1.4px solid var(--border);display:grid;place-items:center;color:var(--fg);
+  transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease);
+}
+.mcard-go svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.mcard:hover .mcard-go{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+@media(min-width:1060px){
+  .menu-grid{grid-template-columns:290px 1fr;align-items:start}
+  .cards{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ============================================================
+   WHY (paper)
+   ============================================================ */
+.why-grid{display:grid;gap:clamp(38px,5vw,60px)}
+.why-photo{max-width:340px}
+.why-body h2{font-family:var(--font-display);font-weight:700;font-size:clamp(38px,4.8vw,56px);line-height:1.18;letter-spacing:-.02em}
+.feats{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 20px}
+.feat{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.feat .ic{width:38px;height:38px;display:grid;place-items:center;color:var(--paper-fg)}
+.feat .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:14px;font-weight:700;line-height:1.35;letter-spacing:.01em}
+.hashtag{font-family:var(--font-mono);font-size:13.5px;letter-spacing:.01em;font-weight:600}
+@media(min-width:620px){.feats{grid-template-columns:repeat(4,1fr);gap:22px 16px}}
+@media(min-width:1060px){
+  .why-grid{grid-template-columns:.82fr 1.02fr 1.2fr;align-items:center;gap:clamp(30px,4vw,56px)}
+  .why-photo{max-width:none}
+}
+
+/* ============================================================
+   GALLERY (dark)
+   ============================================================ */
+.gal-grid{display:grid;gap:clamp(36px,4vw,56px)}
+.gal-intro h2{font-family:var(--font-display);font-weight:700;font-size:clamp(38px,4.8vw,56px);line-height:1.18;letter-spacing:-.02em}
+.gal-intro .btn{margin-top:26px}
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.strip .polaroid{padding:9px 9px 42px}
+.strip .polaroid figcaption{font-size:17px;bottom:9px}
+.strip .ph{aspect-ratio:1/1}
+.strip .polaroid:nth-child(1){transform:rotate(-2.4deg)}
+.strip .polaroid:nth-child(2){transform:rotate(1.8deg)}
+.strip .polaroid:nth-child(3){transform:rotate(2.6deg)}
+.strip .polaroid:nth-child(4){transform:rotate(-1.7deg)}
+@media(min-width:1060px){
+  .gal-grid{grid-template-columns:290px 1fr;align-items:center}
+  .strip{grid-template-columns:repeat(4,1fr);gap:14px}
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{position:relative;z-index:1;background:var(--bg-deep);border-top:1px solid var(--border);padding:clamp(56px,7vw,84px) 0 0}
+.foot-grid{display:grid;gap:36px}
+.foot-brand{display:flex;flex-direction:column;align-items:flex-start}
+.foot-brand .brand-name{font-size:34px}
+.foot-brand .brand-sub{color:var(--muted)}
+.foot-tag{margin-top:14px;font-family:var(--font-display);font-weight:600;font-size:23px;color:var(--fg);line-height:1.3}
+.foot h3{font-size:12px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.foot-addr{font-size:15px;line-height:1.65;color:var(--fg);max-width:34ch}
+.foot-addr .ln{display:flex;gap:10px;align-items:flex-start}
+.foot-addr svg{width:17px;height:17px;flex-shrink:0;margin-top:4px;color:var(--muted)}
+.tlink{
+  display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+  color:var(--fg);font-weight:600;font-size:14.5px;text-decoration:underline;
+  text-underline-offset:4px;text-decoration-thickness:1.5px;transition:color .2s var(--ease)
+}
+.tlink svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease)}
+.tlink:hover{text-decoration-thickness:2.5px}
+.tlink:hover svg{transform:translateX(3px)}
+.socials{display:flex;gap:12px}
+.soc{
+  width:46px;height:46px;border-radius:50%;border:1.5px solid var(--border);
+  display:grid;place-items:center;color:var(--fg);text-decoration:none;
+  transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease);
+}
+.soc:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.soc svg{width:20px;height:20px}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.foot-script{font-family:var(--font-display);font-weight:600;font-size:26px;line-height:1.25;color:var(--fg)}
+.foot-note{margin-top:12px;font-size:14px;color:var(--muted)}
+.foot-note a{color:var(--fg);font-weight:600}
+.foot-bar{
+  margin-top:clamp(44px,6vw,68px);border-top:1px solid var(--border);
+  padding:22px 0 34px;display:flex;flex-wrap:wrap;gap:12px 26px;
+  align-items:center;justify-content:space-between;font-size:13.5px;color:var(--muted);
+}
+.foot-bar nav{display:flex;gap:20px;flex-wrap:wrap}
+.foot-bar a{text-decoration:none;transition:color .2s var(--ease)}
+.foot-bar a:hover{color:var(--fg)}
+.credit a{color:var(--fg);font-weight:600}
+@media(min-width:820px){
+  .foot-grid{grid-template-columns:1.15fr 1fr .8fr;gap:44px}
+  .foot-cta{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between;
+    border-top:1px solid var(--border);padding-top:34px}
+}
+@media(min-width:1060px){.foot-grid{grid-template-columns:1.1fr 1fr .7fr auto}.foot-cta{grid-column:auto;border-top:0;padding-top:0;flex-direction:column;align-items:flex-end;text-align:right}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<span id="top" aria-hidden="true"></span>
+
+<!-- ============ NAV ============ -->
+<header class="nav" data-od-id="site-nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-od-id="nav-brand" aria-label="J Brews Café — home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15h14v5.5A6.5 6.5 0 0 1 12.5 27h-1A6.5 6.5 0 0 1 5 20.5z"/><path d="M19 17h2.3a3.2 3.2 0 0 1 0 6.4H19"/><path d="M9.5 8c0 1.5 1.2 1.9 1.2 3.4M13.5 8c0 1.5 1.2 1.9 1.2 3.4"/></svg></span>
+      <span class="brand-txt">
+        <span class="brand-name">J Brews</span>
+        <span class="brand-sub">Café</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary" data-od-id="nav-links">
+      <a href="#top" class="is-active">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#why">About</a>
+      <a href="#visit">Contact</a>
+    </nav>
+    <div class="nav-act">
+      <a class="btn btn-ghost btn-sm" data-od-id="nav-visit-btn"
+         href="https://www.google.com/maps/search/J+Brews+Cafe+18+Capital+Pk+Rd+VIP+Hills+Madhapur+Hyderabad+500081" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        Visit Us
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-od-id="nav-toggle" aria-label="Open menu">
+        <svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mobile-menu" hidden data-od-id="mobile-menu">
+  <a href="#top">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#why">About</a>
+  <a href="#visit">Contact</a>
+  <a class="btn btn-solid" href="tel:+919182795936">Call 091827 95936</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-od-id="hero" aria-labelledby="hero-title">
+  <img class="hero-bg" src="assets/img-15.jpg" alt="The warmly lit interior of J Brews Café in Madhapur, with white tables and low pendant lights" fetchpriority="high" decoding="async">
+  <div class="wrap hero-in">
+    <div>
+      <h1 id="hero-title" data-od-id="hero-title">
+        More Than
+        <span class="l2">Just Coffee
+          <svg class="swash" viewBox="0 0 320 22" aria-hidden="true"><path d="M6 15C64 5 128 19 194 9c44-7 84 4 120 2"/></svg>
+        </span>
+      </h1>
+      <p class="hero-sub" data-od-id="hero-sub">Great brews, good food, chill vibes. That&rsquo;s J Brews.</p>
+      <p class="hero-loc" data-od-id="hero-address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <span>Madhapur, Hyderabad</span>
+      </p>
+      <a class="scroll-cue" href="#signature" data-od-id="scroll-cue"><span class="mouse" aria-hidden="true"></span> Scroll Down</a>
+    </div>
+    <p class="hero-note" aria-hidden="true">Coffee<br>Food<br>Friends<br><span class="hero-note-em">Always</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.6-7 9-7 9z"/></svg>
+    </p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE ============ -->
+<section class="band band-paper torn" id="signature" data-od-id="signature-section" aria-labelledby="sig-title">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap sig-grid">
+    <figure class="polaroid rot-l sig-photo" data-od-id="signature-photo">
+      <span class="ph"><img src="assets/img-17.jpg" alt="A cocoa-dusted cappuccino in a speckled cup at J Brews Café" loading="lazy" decoding="async"></span>
+      <figcaption>Poured fresh, every time</figcaption>
+    </figure>
+
+    <div class="sig-body">
+      <p class="eyebrow" data-od-id="signature-eyebrow">Our signature</p>
+      <h2 class="display" id="sig-title" data-od-id="signature-heading">Brewed<br>with Passion
+        <svg class="swash" viewBox="0 0 320 22" aria-hidden="true"><path d="M6 15C64 5 128 19 194 9c44-7 84 4 120 2"/></svg>
+      </h2>
+      <p class="lede">From rich espressos to creamy lattes, refreshing coolers to delicious bites — everything here is crafted to make your day better.</p>
+      <a class="btn btn-dark" data-od-id="signature-cta" href="#menu">
+        Explore Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <ul class="sig-list" data-od-id="signature-list">
+      <li>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 12h16v7a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M21 14h2.5a3.5 3.5 0 0 1 0 7H21"/><path d="M10 4c0 1.6 1.2 2 1.2 3.6M15 4c0 1.6 1.2 2 1.2 3.6"/></svg></span>
+        <span><b>Specialty coffee</b><span>Espresso, cappuccino, cold coffee</span></span>
+      </li>
+      <li>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 15l12-6 12 6"/><path d="M4 15v9l12 4 12-4v-9"/><path d="M4 19l12 4 12-4"/></svg></span>
+        <span><b>Fresh food</b><span>Toasts, sandwiches, pizza</span></span>
+      </li>
+      <li>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 6h14l-1.6 20a3 3 0 0 1-3 2.8h-4.8A3 3 0 0 1 10.6 26z"/><path d="M10.4 14h11.2"/><path d="M19 6L23 2"/></svg></span>
+        <span><b>Coolers &amp; shakes</b><span>Mojitos, splashers, milkshakes</span></span>
+      </li>
+      <li>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 27h20v-7H6z"/><path d="M8 20v-4a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4"/><path d="M16 13V8"/><path d="M16 5.5a1.6 1.6 0 1 1 0-.1"/></svg></span>
+        <span><b>Desserts &amp; more</b><span>Sizzling brownies and sweet endings</span></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="band" id="menu" data-od-id="menu-section" aria-labelledby="menu-title">
+  <div class="wrap menu-grid">
+    <div class="menu-intro">
+      <p class="eyebrow" data-od-id="menu-eyebrow">Our menu</p>
+      <h2 class="display" id="menu-title" data-od-id="menu-heading">Something<br>for Everyone
+        <svg class="swash" viewBox="0 0 320 22" aria-hidden="true"><path d="M6 15C64 5 128 19 194 9c44-7 84 4 120 2"/></svg>
+      </h2>
+      <p class="lede">Classic brews, signature sips, comfort food and sweet endings.</p>
+      <a class="btn btn-ghost" data-od-id="menu-cta" href="https://wa.me/919182795936?text=Hi%20J%20Brews%21%20Could%20I%20get%20today%27s%20menu%3F" target="_blank" rel="noopener">
+        View Full Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="cards">
+      <a class="mcard" data-od-id="menu-card-coffee" href="https://wa.me/919182795936?text=Hi%20J%20Brews%21%20I%27d%20like%20a%20coffee." target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/img-06.jpg" alt="A hot coffee in a J Brews cup, poured fresh at the café" loading="lazy" decoding="async"></span>
+        <div class="mcard-body">
+          <h3>Coffee</h3>
+          <p>From classic to signature.</p>
+          <span class="mcard-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="mcard" data-od-id="menu-card-cold-drinks" href="https://wa.me/919182795936?text=Hi%20J%20Brews%21%20I%27d%20like%20a%20cold%20drink." target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/img-16.jpg" alt="Two chilled mocktails, one blue and one red, at J Brews Café" loading="lazy" decoding="async"></span>
+        <div class="mcard-body">
+          <h3>Cold Drinks</h3>
+          <p>Cool, Refreshing, Perfect.</p>
+          <span class="mcard-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="mcard" data-od-id="menu-card-food" href="https://wa.me/919182795936?text=Hi%20J%20Brews%21%20I%27d%20like%20to%20order%20food." target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/img-10.jpg" alt="A freshly baked vegetable pizza on a wooden board at J Brews Café" loading="lazy" decoding="async"></span>
+        <div class="mcard-body">
+          <h3>Food</h3>
+          <p>Fresh, Tasty, Satisfying.</p>
+          <span class="mcard-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="mcard" data-od-id="menu-card-desserts" href="https://wa.me/919182795936?text=Hi%20J%20Brews%21%20Save%20me%20a%20dessert." target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/img-08.jpg" alt="A chocolate dessert topped with ice cream at J Brews Café" loading="lazy" decoding="async"></span>
+        <div class="mcard-body">
+          <h3>Desserts</h3>
+          <p>Because life is sweeter.</p>
+          <span class="mcard-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="band band-paper torn" id="why" data-od-id="why-section" aria-labelledby="why-title">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap why-grid">
+    <figure class="polaroid rot-r why-photo" data-od-id="why-photo">
+      <span class="ph"><img src="assets/img-01.jpg" alt="A corner of J Brews Café with an orange wall, framed travel photos and a small table for two" loading="lazy" decoding="async"></span>
+      <figcaption>Good vibes only</figcaption>
+    </figure>
+
+    <div class="why-body">
+      <p class="eyebrow" data-od-id="why-eyebrow">Why J Brews?</p>
+      <h2 class="display" id="why-title" data-od-id="why-heading">Your Everyday<br>Hangout
+        <svg class="swash" viewBox="0 0 320 22" aria-hidden="true"><path d="M6 15C64 5 128 19 194 9c44-7 84 4 120 2"/></svg>
+      </h2>
+      <p class="lede">A cozy space, great coffee, tasty food and a vibe that feels like home.</p>
+    </div>
+
+    <ul class="feats" data-od-id="why-features">
+      <li class="feat" data-od-id="feature-wifi">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 12.5a18 18 0 0 1 24 0"/><path d="M8.5 17.5a11.5 11.5 0 0 1 15 0"/><path d="M13 22.5a5 5 0 0 1 6 0"/><circle cx="16" cy="26.5" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+        <span><b>Free Wi-Fi</b></span>
+      </li>
+      <li class="feat" data-od-id="feature-seating">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 14V10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><path d="M5 14a2.5 2.5 0 0 1 2.5 2.5V19h17v-2.5A2.5 2.5 0 0 1 27 14a2.5 2.5 0 0 1 2.5 2.5V24h-27v-7.5A2.5 2.5 0 0 1 5 14z"/><path d="M8 24v3M24 24v3"/></svg></span>
+        <span><b>Cozy Seating</b></span>
+      </li>
+      <li class="feat" data-od-id="feature-work">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="12" cy="11" r="3.2"/><path d="M5.5 25a6.5 6.5 0 0 1 13 0"/><circle cx="23" cy="12.5" r="2.4"/><path d="M19 25a5 5 0 0 1 8.5-3.5"/></svg></span>
+        <span><b>Work &amp; Chill Friendly</b></span>
+      </li>
+      <li class="feat" data-od-id="feature-pets">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 32 32"><ellipse cx="9" cy="11" rx="2.3" ry="3"/><ellipse cx="15.5" cy="8.5" rx="2.3" ry="3"/><ellipse cx="22" cy="11" rx="2.3" ry="3"/><ellipse cx="26" cy="16.5" rx="2.3" ry="3"/><path d="M9.5 22.5c1.5-3 4-4.5 6.5-4.5s5 1.5 6.5 4.5c1 2-.3 4.5-2.8 4.5-1.4 0-2.4-.8-3.7-.8s-2.3.8-3.7.8c-2.5 0-3.8-2.5-2.8-4.5z"/></svg></span>
+        <span><b>Pet Friendly</b></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="band band-deep" id="gallery" data-od-id="gallery-section" aria-labelledby="gal-title">
+  <div class="wrap gal-grid">
+    <div class="gal-intro">
+      <p class="eyebrow" data-od-id="gallery-eyebrow">Gallery</p>
+      <h2 class="display" id="gal-title" data-od-id="gallery-heading">Moments<br>at J Brews
+        <svg class="swash" viewBox="0 0 320 22" aria-hidden="true"><path d="M6 15C64 5 128 19 194 9c44-7 84 4 120 2"/></svg>
+      </h2>
+      <p class="lede">Coffee, conversations, and candid moments.</p>
+      <a class="btn btn-ghost" data-od-id="gallery-cta" href="https://www.instagram.com/j_brews_2023/" target="_blank" rel="noopener">
+        View Gallery
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="strip" data-od-id="gallery-strip">
+      <figure class="polaroid" data-od-id="gallery-photo-1">
+        <span class="ph"><img src="assets/img-07.jpg" alt="Two coffees served together on a yellow tray at J Brews Café" loading="lazy" decoding="async"></span>
+        <figcaption>Two of a kind</figcaption>
+      </figure>
+      <figure class="polaroid" data-od-id="gallery-photo-2">
+        <span class="ph"><img src="assets/img-05.jpg" alt="The bright yellow dining room at J Brews Café with white tables and chairs" loading="lazy" decoding="async"></span>
+        <figcaption>Yellow room</figcaption>
+      </figure>
+      <figure class="polaroid" data-od-id="gallery-photo-3">
+        <span class="ph"><img src="assets/img-12.jpg" alt="A cold coffee topped with coffee beans and a chocolate drizzle at J Brews Café" loading="lazy" decoding="async"></span>
+        <figcaption>Cold coffee</figcaption>
+      </figure>
+      <figure class="polaroid" data-od-id="gallery-photo-4">
+        <span class="ph"><img src="assets/img-24.jpg" alt="The hanging egg chair and garlands at J Brews Café" loading="lazy" decoding="async"></span>
+        <figcaption>The swing seat</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot" id="visit" data-od-id="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand" data-od-id="footer-brand">
+        <a class="brand" href="#top" aria-label="J Brews Café — home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15h14v5.5A6.5 6.5 0 0 1 12.5 27h-1A6.5 6.5 0 0 1 5 20.5z"/><path d="M19 17h2.3a3.2 3.2 0 0 1 0 6.4H19"/><path d="M9.5 8c0 1.5 1.2 1.9 1.2 3.4M13.5 8c0 1.5 1.2 1.9 1.2 3.4"/></svg></span>
+          <span class="brand-txt">
+            <span class="brand-name">J Brews</span>
+            <span class="brand-sub">Café</span>
+          </span>
+        </a>
+        <p class="foot-tag">Coffee, Tea &amp; Conversation.</p>
+      </div>
+
+      <div data-od-id="footer-address">
+        <h3>Find us</h3>
+        <p class="foot-addr">
+          <span class="ln">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Madhapur, Hyderabad<br>Near Image Hospitals, Madhapur</span>
+          </span>
+        </p>
+        <a class="tlink" data-od-id="footer-directions" href="https://www.google.com/maps/search/J+Brews+Cafe+Madhapur+Hyderabad" target="_blank" rel="noopener">
+          Get directions
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="foot-note">Hours vary on holidays — <a href="tel:+919182795936">call 091827 95936</a> for today&rsquo;s.</p>
+      </div>
+
+      <div data-od-id="footer-social">
+        <h3>Follow us</h3>
+        <div class="socials">
+          <a class="soc" data-od-id="footer-instagram" href="https://www.instagram.com/j_brews_2023/" target="_blank" rel="noopener" aria-label="J Brews Café on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a class="soc" data-od-id="footer-facebook" href="https://www.facebook.com/search/top?q=j%20brews%20cafe%20madhapur" target="_blank" rel="noopener" aria-label="J Brews Café on Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 8.5h2.2V5.6h-2.4c-2.2 0-3.6 1.5-3.6 3.7v1.6H8.3v2.9h2.4V20h3v-6.2h2.4l.5-2.9h-2.9V9.6c0-.7.3-1.1.8-1.1z"/></svg>
+          </a>
+          <a class="soc" data-od-id="footer-whatsapp" href="https://wa.me/919182795936" target="_blank" rel="noopener" aria-label="Message J Brews Café on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6z"/><path d="M8.9 9.1c.3 2.6 3.4 5.7 6 6l1.2-1.4 1.9.9-.5 1.6c-2.9.7-7.9-2.9-9.7-6.6l1.6-1.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-cta" data-od-id="footer-cta">
+        <p class="foot-script">Coffee brings<br>people together</p>
+        <a class="btn btn-gold" data-od-id="footer-maps-btn"
+           href="https://www.google.com/maps/search/J+Brews+Cafe+Madhapur+Hyderabad" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Visit Us
+        </a>
+      </div>
+    </div>
+
+    <div class="foot-bar" data-od-id="footer-bar">
+      <span>© <span id="yr">2026</span> J Brews Café · Madhapur</span>
+      <nav aria-label="Footer">
+        <a href="tel:+919182795936">Call</a>
+        <a href="https://wa.me/919182795936" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/j_brews_2023/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <span class="credit">Website by <a href="tel:+918374804403">Grafick Signs Hyderabad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var toggle = document.querySelector('.nav-toggle');
+  var mnav = document.getElementById('mobile-menu');
+
+  /* sticky nav state */
+  function onScroll(){ nav.classList.toggle('is-stuck', window.scrollY > 24); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* mobile drawer */
+  function setMenu(open){
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mnav.hidden = !open;
+  }
+  toggle.addEventListener('click', function(){
+    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  mnav.addEventListener('click', function(e){ if(e.target.tagName === 'A') setMenu(false); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true'){
+      setMenu(false); toggle.focus();
+    }
+  });
+  window.addEventListener('resize', function(){ if(window.innerWidth >= 940) setMenu(false); });
+
+  /* active section highlight */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var order = ['menu','why','gallery','visit'];
+  var visible = Object.create(null);
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ visible[en.target.id] = en.isIntersecting; });
+      var active = 'top';
+      order.forEach(function(id){ if(visible[id]) active = id; });
+      links.forEach(function(a){
+        a.classList.toggle('is-active', a.getAttribute('href') === '#' + active);
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    order.forEach(function(id){ var el = document.getElementById(id); if(el) io.observe(el); });
+  }
+
+  /* year */
+  var yr = document.getElementById('yr');
+  if(yr) yr.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>

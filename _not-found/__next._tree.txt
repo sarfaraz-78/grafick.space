@@ -1,0 +1,3 @@
+:HL["/grafick-site/_next/static/chunks/1bkcba52fkac4.css","style"]
+:HL["/images/grafick-logo.svg","image",{"type":"image/svg+xml"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Y9G0VoCdlWtGFMd8TNE3Z"}
