@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ganesh Sportswear | Sports Clothing in Dilsukhnagar</title>
+<meta name="description" content="Ganesh Sportswear in Dilsukhnagar: jerseys, track pants, shoes, gym wear and school sports kits. Rated 4.9 stars from 683 Google reviews. Call +91 98854 50622.">
+<meta name="theme-color" content="#101010">
+<meta property="og:title" content="Ganesh Sportswear | Sports Clothing in Dilsukhnagar">
+<meta property="og:description" content="Sports wear, shoes &amp; team kits in Dilsukhnagar — worn by local champions. 4.9 stars, 683 Google reviews.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ganesh Sportswear">
+<meta property="og:locale" content="en_IN">
+<!-- When deployed, swap og:image to the absolute URL of this file -->
+<meta property="og:image" content="assets/hero-jerseys.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ganesh Sportswear | Sports Clothing in Dilsukhnagar">
+<meta name="twitter:description" content="Sports wear, shoes &amp; team kits in Dilsukhnagar — worn by local champions. 4.9 stars, 683 Google reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS (OKLch derived from brief palette — see brand-spec.md) ============ */
+:root{
+  --bg:oklch(0.173 0.000 89.9);          /* #101010 near-black */
+  --surface:oklch(0.222 0.000 89.9);     /* raised black */
+  --fg:oklch(0.959 0.010 87.5);          /* #f4f1ea bone */
+  --muted:oklch(0.764 0.007 88.7);       /* secondary on dark, 8.98:1 */
+  --border:oklch(0.341 0.002 67.8);      /* hairline on dark */
+  --accent:oklch(0.940 0.208 120.9);     /* #d8ff3e volt */
+  --accent-hover:oklch(0.860 0.208 120.9);   /* L -0.08 */
+  --accent-active:oklch(0.800 0.208 120.9);  /* L -0.14 */
+  --paper:oklch(0.959 0.010 87.5);       /* bone section ground */
+  --ink:oklch(0.173 0.000 89.9);         /* text on bone / volt */
+  --muted-ink:oklch(0.510 0.005 91.5);   /* secondary on bone, 5.09:1 */
+  --fg-45:oklch(0.959 0.010 87.5 / 0.45);
+  --fg-35:oklch(0.959 0.010 87.5 / 0.35);
+  --fg-22:oklch(0.959 0.010 87.5 / 0.22);
+  --fg-12:oklch(0.959 0.010 87.5 / 0.12);
+  --fg-07:oklch(0.959 0.010 87.5 / 0.07);
+  --ink-10:oklch(0.173 0.000 89.9 / 0.10);
+  --ink-60:oklch(0.173 0.000 89.9 / 0.62);
+  --font-display:'Anton','Arial Narrow','Franklin Gothic Medium',Impact,sans-serif;
+  --font-body:'Inter',system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --pad:clamp(1.25rem,4vw,2rem);
+}
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--fg);
+  font-family:var(--font-body);font-size:1.0625rem;line-height:1.55;letter-spacing:0;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase}
+p{max-width:68ch}
+::selection{background:var(--accent);color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.section--paper :focus-visible,.band--volt :focus-visible{outline-color:var(--ink)}
+.skip-link{
+  position:absolute;left:1rem;top:-4rem;z-index:100;
+  background:var(--accent);color:var(--ink);font-weight:600;font-size:.875rem;
+  letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:.8rem 1.2rem;
+  transition:top .15s ease;
+}
+.skip-link:focus{top:1rem}
+.wrap{width:min(1200px,100% - 2 * var(--pad));margin-inline:auto}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ============ SHARED POSTER PIECES ============ */
+.eyebrow{
+  display:flex;align-items:center;gap:.7rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+}
+.eyebrow__num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:2rem;height:2rem;padding:0 .35rem;
+  background:var(--accent);color:var(--ink);
+  font-family:var(--font-display);font-size:.95rem;letter-spacing:.02em;line-height:1;
+}
+.bib{
+  display:inline-flex;align-items:baseline;gap:.6rem;
+  border:1.5px dashed var(--fg-35);padding:.5rem .8rem;
+  transform:rotate(-1.6deg);
+}
+.bib__num{font-family:var(--font-display);font-size:1.5rem;line-height:1;letter-spacing:.01em}
+.bib__label{font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stripe-band{
+  height:16px;
+  background:repeating-linear-gradient(45deg,var(--accent) 0 14px,transparent 14px 28px);
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:48px;padding:.85rem 1.7rem;
+  font-family:var(--font-body);font-size:.95rem;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;
+  transition:background-color .18s ease,transform .18s ease,border-color .18s ease;
+}
+.btn--volt{background:var(--accent);color:var(--ink)}
+.btn--volt:hover{background:var(--accent-hover)}
+.btn--volt:active{background:var(--accent-active);transform:translateY(1px)}
+.btn--ghost{background:transparent;color:var(--fg);border-color:var(--fg-45)}
+.btn--ghost:hover{background:var(--fg-07);border-color:var(--fg)}
+.btn--ghost:active{transform:translateY(1px)}
+.btn--ink{background:var(--ink);color:var(--fg)}
+.btn--ink:hover{background:var(--surface)}
+.btn--ink:active{transform:translateY(1px)}
+.link-underline{
+  color:inherit;text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;transition:text-decoration-thickness .15s ease;
+}
+.link-underline:hover{text-decoration-thickness:2px}
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:var(--bg);border-bottom:1px solid var(--border);
+}
+.site-header__inner{display:flex;align-items:center;gap:1.5rem;min-height:66px}
+.wordmark{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.wordmark__main{
+  font-family:var(--font-display);font-size:1.9rem;line-height:.95;
+  letter-spacing:-.015em;color:var(--accent);text-transform:uppercase;
+}
+.wordmark__sub{
+  font-size:.6875rem;font-weight:600;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--muted);margin-top:.28rem;
+}
+.site-nav{margin-left:auto}
+.site-nav ul{display:flex;gap:.4rem;list-style:none}
+.site-nav a{
+  display:inline-flex;align-items:center;min-height:44px;padding:.35rem .75rem;
+  font-size:.8125rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  text-decoration:none;color:var(--fg);border-radius:2px;
+  transition:background-color .16s ease;
+}
+.site-nav a:hover{background:var(--fg-12)}
+.btn-call{
+  margin-left:.6rem;background:var(--accent);color:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:.65rem 1.35rem;border-radius:999px;
+  font-size:.875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;transition:background-color .18s ease,transform .18s ease;
+}
+.btn-call:hover{background:var(--accent-hover)}
+.btn-call:active{background:var(--accent-active);transform:translateY(1px)}
+.nav-toggle{
+  display:none;margin-left:auto;width:46px;height:46px;
+  background:transparent;border:1px solid var(--fg-45);color:var(--fg);cursor:pointer;
+  align-items:center;justify-content:center;
+}
+.nav-toggle:hover{border-color:var(--fg)}
+/* ============ HERO ============ */
+.hero{padding:clamp(3rem,6.5vw,5.25rem) 0 clamp(3.25rem,6vw,5rem)}
+.hero__grid{
+  display:grid;grid-template-columns:1.12fr .88fr;
+  gap:clamp(2rem,4.5vw,3.75rem);align-items:center;
+}
+.hero__eyebrow{
+  font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1.4rem;
+}
+.hero h1{
+  font-size:clamp(2.6rem,6.4vw,4.5rem);line-height:1.0;letter-spacing:-.02em;
+}
+.hero h1 span{display:block}
+.hero__sub{
+  margin-top:1.3rem;color:var(--muted);font-size:1.0625rem;max-width:44ch;
+}
+.hero__meta{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;margin-top:1.75rem}
+.rating-badge{
+  display:inline-flex;align-items:center;gap:.55rem;
+  border:1px solid var(--fg-35);padding:.6rem 1rem;max-width:none;
+  font-size:.9375rem;color:var(--fg);
+}
+.rating-badge__score{
+  font-family:var(--font-display);font-size:1.35rem;line-height:1;letter-spacing:0;
+}
+.hero__ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.photo-wrap{position:relative;padding-top:10px;padding-right:10px}
+.photo-wrap::before{
+  content:"";position:absolute;top:0;right:0;width:55%;height:70%;
+  background:repeating-linear-gradient(45deg,var(--accent) 0 12px,var(--bg) 12px 24px);
+  clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);
+}
+.photo-frame{
+  position:relative;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%);
+  background:var(--surface);
+}
+.photo-frame img{width:100%;height:auto}
+.photo-tag{
+  position:absolute;left:16px;bottom:16px;z-index:2;
+  background:var(--bg);color:var(--fg);
+  font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem .85rem;box-shadow:0 8px 22px oklch(0 0 0 / 0.5);
+}
+/* ============ SECTION SCAFFOLD ============ */
+.section{padding:clamp(3.5rem,7vw,5.75rem) 0}
+.section--paper{background:var(--paper);color:var(--ink)}
+.section__head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:2rem;flex-wrap:wrap;margin-bottom:clamp(2rem,4vw,3rem);
+}
+.section__head h2{
+  font-size:clamp(2rem,4.6vw,3.25rem);line-height:1.05;letter-spacing:-.02em;
+  margin-top:.9rem;
+}
+.section__note{font-size:.9375rem;color:var(--muted-ink);max-width:40ch}
+.section--dark .section__note{color:var(--muted)}
+/* ============ STOCK WALL ============ */
+.stock-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.9rem;grid-auto-rows:minmax(198px,auto);
+}
+.chip{
+  position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  gap:.4rem;padding:1.15rem 1.2rem 1.1rem;
+  background:var(--bg);color:var(--fg);border:1px solid transparent;
+  transition:border-color .18s ease,transform .18s ease;
+}
+.chip:hover{border-color:var(--fg-35);transform:translateY(-3px)}
+.chip:focus-within{border-color:var(--accent)}
+.chip__num{
+  position:absolute;top:.85rem;right:1rem;
+  font-family:var(--font-display);font-size:1.05rem;color:var(--muted);letter-spacing:.04em;
+}
+.chip__name{
+  font-size:clamp(1.35rem,1.8vw,1.6rem);line-height:1.1;letter-spacing:-.01em;
+}
+.chip__price{
+  font-family:var(--font-display);font-size:clamp(2.4rem,3.4vw,3.1rem);
+  line-height:1;letter-spacing:-.01em;max-width:none;
+}
+.chip__rupee{
+  font-family:var(--font-body);font-weight:600;font-size:.5em;
+  letter-spacing:0;vertical-align:.42em;margin-right:.06em;
+}
+.chip__link{
+  display:inline-flex;align-items:center;gap:.4rem;min-height:44px;margin-top:.35rem;
+  font-size:.875rem;font-weight:600;letter-spacing:.02em;
+  color:inherit;text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;align-self:flex-start;
+  transition:text-decoration-thickness .15s ease;
+}
+.chip__link:hover{text-decoration-thickness:2px}
+.chip__link span{transition:transform .18s ease}
+.chip__link:hover span{transform:translate(2px,-2px)}
+.chip--feature{background:var(--accent);color:var(--ink);grid-column:span 2;grid-row:span 2;justify-content:center;gap:.7rem}
+.chip--feature .chip__num{color:var(--ink);font-size:1.3rem}
+.chip--feature .chip__price{font-size:clamp(3.6rem,7vw,5.5rem)}
+.chip--feature .chip__name{font-size:clamp(2rem,3.6vw,2.9rem)}
+.chip--feature:hover{border-color:var(--ink)}
+.chip--ask{background:var(--surface);border:1px dashed var(--fg-35);justify-content:center}
+.chip--ask .chip__q{
+  font-family:var(--font-display);font-size:clamp(2.6rem,4vw,3.4rem);
+  line-height:1;letter-spacing:-.02em;color:var(--fg);
+}
+.chip--ask p{font-size:.9375rem;color:var(--muted);max-width:24ch}
+/* ============ TEAM ORDERS BAND ============ */
+.band--volt{
+  background:var(--accent);color:var(--ink);
+  clip-path:polygon(0 2rem,100% 0,100% calc(100% - 2rem),0 100%);
+  padding:calc(clamp(3.75rem,7vw,6rem) + 1rem) 0;
+  position:relative;overflow:clip;
+}
+.band--volt .eyebrow__num{background:var(--ink);color:var(--accent)}
+.teams__grid{
+  display:grid;grid-template-columns:1.35fr .65fr;
+  gap:clamp(1.5rem,4vw,3rem);align-items:end;position:relative;z-index:1;
+}
+.teams__ghost{
+  position:absolute;top:-1.5rem;right:-1rem;z-index:0;pointer-events:none;
+  font-family:var(--font-display);font-size:clamp(7rem,17vw,14rem);line-height:1;
+  letter-spacing:-.03em;color:transparent;
+  -webkit-text-stroke:2px oklch(0.173 0.000 89.9 / 0.3);
+}
+.band--volt h2{
+  font-size:clamp(2.1rem,5.4vw,4rem);line-height:1.03;letter-spacing:-.02em;
+  max-width:16ch;
+}
+.teams__sub{margin-top:1.1rem;font-size:1.0625rem;color:oklch(0.173 0.000 89.9 / 0.78);max-width:46ch}
+.teams__tags{
+  margin-top:1.4rem;font-size:.75rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:oklch(0.173 0.000 89.9 / 0.72);
+}
+.teams__cta{justify-self:end;text-align:right}
+.teams__cta .btn{width:100%;max-width:320px}
+.teams__cta small{
+  display:block;margin-top:.8rem;font-size:.8125rem;font-weight:500;
+  color:oklch(0.173 0.000 89.9 / 0.72);
+}
+@supports not (-webkit-text-stroke:1px black){.teams__ghost,.pillar-num{color:var(--ink-60)}}
+/* ============ WHY GANESH — SCOREBOARD ============ */
+.scoreboard{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--border);border:1px solid var(--border);
+}
+.stat{background:var(--bg);padding:1.6rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.stat__value{
+  font-family:var(--font-display);font-size:clamp(2.1rem,3.4vw,3rem);
+  line-height:1;letter-spacing:-.01em;color:var(--fg);max-width:none;
+}
+.stat__value .star{font-family:var(--font-body);font-weight:600;font-size:.55em;vertical-align:.35em;margin-left:.1em}
+.stat--accent .stat__value{color:var(--accent)}
+.stat__label{
+  font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);
+}
+/* ============ REVIEWS ============ */
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.review{
+  position:relative;border:1px solid var(--ink);padding:2rem 1.9rem 1.7rem;
+  background:var(--paper);overflow:clip;
+}
+.review__mark{
+  position:absolute;top:-.6rem;right:.9rem;
+  font-family:var(--font-display);font-size:6.5rem;line-height:1;
+  color:var(--ink-10);pointer-events:none;
+}
+.review blockquote{position:relative;font-size:1.125rem;line-height:1.55;max-width:38ch}
+.review figcaption{
+  margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--ink-10);
+  font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted-ink);
+}
+.reviews__footnote{
+  margin-top:1.5rem;font-size:.8125rem;color:var(--muted-ink);max-width:70ch;
+}
+/* ============ CONTACT ============ */
+.visit__grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:clamp(2rem,5vw,4rem);align-items:start;
+}
+.detail-list{border-top:1px solid var(--border);margin-top:.5rem}
+.detail-row{
+  display:grid;grid-template-columns:130px 1fr;gap:1.25rem;
+  padding:1.15rem 0;border-bottom:1px solid var(--border);align-items:baseline;
+}
+.detail-row dt{
+  font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.detail-row dd{font-size:1.0625rem;line-height:1.5}
+.detail-row dd a{display:inline-flex;align-items:center;gap:.45rem}
+.visit__ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.pillar{text-align:right}
+.pillar-num{
+  font-family:var(--font-display);font-size:clamp(4rem,9vw,7.5rem);line-height:1;
+  letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2px var(--fg-35);
+}
+.pillar__cap{
+  margin-top:.7rem;font-size:.75rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+}
+/* ============ FOOTER ============ */
+.site-footer{border-top:1px solid var(--border);padding:2.5rem 0 3.5rem}
+.footer__grid{
+  display:grid;grid-template-columns:1.2fr 1.4fr auto;gap:2rem;align-items:start;
+}
+.footer__line{font-family:var(--font-display);font-size:1.45rem;line-height:1.15;letter-spacing:-.01em;text-transform:uppercase;color:var(--accent);max-width:none}
+.footer__credit{font-size:.9375rem;color:var(--muted)}
+.footer__copy{font-size:.875rem;color:var(--muted);text-align:right}
+/* ============ MOBILE STICKY BAR ============ */
+.mobile-bar{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+  gap:.6rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--bg);border-top:1px solid var(--border);
+}
+.mobile-bar a{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  min-height:50px;font-size:.9375rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;
+}
+.mb-call{background:var(--accent);color:var(--ink)}
+.mb-wa{background:var(--surface);color:var(--fg);border:1px solid var(--fg-45)}
+/* ============ RESPONSIVE ============ */
+@media (max-width:1020px){
+  .stock-grid{grid-template-columns:repeat(2,1fr)}
+  .chip--feature{grid-column:span 2;grid-row:span 1}
+  .scoreboard{grid-template-columns:repeat(2,1fr)}
+  .teams__grid{grid-template-columns:1fr;align-items:start}
+  .teams__cta{justify-self:start;text-align:left}
+  .teams__cta .btn{max-width:none}
+}
+@media (max-width:900px){
+  .hero__grid{grid-template-columns:1fr}
+  .photo-wrap{max-width:560px}
+  .visit__grid{grid-template-columns:1fr}
+  .pillar{text-align:left}
+  .footer__grid{grid-template-columns:1fr;gap:1.4rem}
+  .footer__copy{text-align:left}
+}
+@media (max-width:940px){
+  .nav-toggle{display:inline-flex}
+  .site-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--bg);border-bottom:1px solid var(--border);
+    padding:.5rem var(--pad) 1rem;margin-left:0;
+  }
+  .site-nav.is-open{display:block}
+  .site-nav ul{flex-direction:column;gap:0}
+  .site-nav a{min-height:48px;font-size:.9375rem;border-bottom:1px solid var(--fg-07)}
+  .site-header__inner{position:relative}
+}
+@media (max-width:768px){
+  .mobile-bar{display:flex}
+  .btn-call{display:none}
+  body{padding-bottom:74px}
+  .stock-grid{grid-template-columns:1fr}
+  .chip--feature{grid-column:span 1}
+  .review-grid{grid-template-columns:1fr}
+  .detail-row{grid-template-columns:1fr;gap:.3rem}
+  .teams__ghost{display:none}
+  .section__head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:420px){
+  .scoreboard{grid-template-columns:1fr}
+  .hero__ctas .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Ganesh Sportswear",
+  "description": "Sports clothing and footwear in Dilsukhnagar, Hyderabad — jerseys, track pants, shoes, gym wear and school sports kits.",
+  "telephone": "+919885450622",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No. 28, near Chaitanyapuri Main Road (Metro pillar A1563), Dilsukhnagar",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500060",
+    "addressCountry": "IN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "683",
+    "bestRating": "5"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-od-id="skip-to-content">Skip to content</a>
+
+<header class="site-header" data-od-id="site-header">
+  <div class="wrap site-header__inner">
+    <a class="wordmark" href="#main" data-od-id="header-wordmark" aria-label="Ganesh Sportswear — home">
+      <span class="wordmark__main">Ganesh</span>
+      <span class="wordmark__sub">Sportswear</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-od-id="nav-toggle">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true">
+        <path d="M0 1h22M0 8h22M0 15h22" stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Main" data-od-id="site-nav">
+      <ul>
+        <li><a href="#stock">Stock</a></li>
+        <li><a href="#teams">Team orders</a></li>
+        <li><a href="#why">Why us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn-call" href="tel:+919885450622" aria-label="Call Ganesh Sportswear on 98854 50622" data-od-id="header-call-pill">CALL 98854 50622</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" data-od-id="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="hero__eyebrow" data-od-id="hero-eyebrow">Ganesh Sportswear — Dilsukhnagar, Hyderabad</p>
+        <h1 data-od-id="hero-headline">
+          <span>PLAY HARD.</span>
+          <span>LOOK SHARPER.</span>
+        </h1>
+        <p class="hero__sub" data-od-id="hero-sub">Sports wear, shoes &amp; team kits in Dilsukhnagar — worn by local champions.</p>
+        <div class="hero__meta">
+          <p class="rating-badge" data-od-id="hero-rating-badge">
+            <span aria-hidden="true">★</span>
+            <span class="rating-badge__score">4.9</span>
+            <span>· 683 Google reviews</span>
+          </p>
+          <span class="bib" data-od-id="hero-bib">
+            <span class="bib__label">Shop No.</span>
+            <span class="bib__num">28</span>
+            <span class="bib__label">Dilsukhnagar</span>
+          </span>
+        </div>
+        <div class="hero__ctas">
+          <a class="btn btn--volt" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20today%27s%20stock%20and%20sizes." data-od-id="hero-whatsapp-cta">WhatsApp for stock</a>
+          <a class="btn btn--ghost" href="tel:+919885450622" data-od-id="hero-call-cta">Call now</a>
+        </div>
+      </div>
+      <div class="photo-wrap" data-od-id="hero-photo">
+        <figure class="photo-frame">
+          <img src="assets/hero-jerseys.jpg" alt="Sports jerseys" width="900" height="563" loading="lazy" data-od-id="hero-photo-img">
+          <figcaption class="photo-tag" data-od-id="hero-photo-tag">Team jerseys · name &amp; number print</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe-band" aria-hidden="true"></div>
+
+  <!-- ============ STOCK WALL ============ -->
+  <section class="section section--paper" id="stock" data-od-id="stock-section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-od-id="stock-eyebrow"><span class="eyebrow__num">01</span> Stock wall</p>
+          <h2 data-od-id="stock-heading">What's on the rack</h2>
+        </div>
+        <p class="section__note" data-od-id="stock-note">Message us on WhatsApp for today's stock, sizes and colours.</p>
+      </div>
+
+      <div class="stock-grid">
+        <article class="chip chip--feature" data-od-id="stock-chip-jerseys">
+          <span class="chip__num" aria-hidden="true">01</span>
+          <h3 class="chip__name">Jerseys</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>599</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Jerseys%20(%E2%82%B9599).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-track-pants">
+          <span class="chip__num" aria-hidden="true">02</span>
+          <h3 class="chip__name">Track pants</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>499</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Track%20pants%20(%E2%82%B9499).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-running-shoes">
+          <span class="chip__num" aria-hidden="true">03</span>
+          <h3 class="chip__name">Running shoes</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>1299</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Running%20shoes%20(%E2%82%B91299).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-gym-tshirts">
+          <span class="chip__num" aria-hidden="true">04</span>
+          <h3 class="chip__name">Gym T-shirts</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>399</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Gym%20T-shirts%20(%E2%82%B9399).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-school-kits">
+          <span class="chip__num" aria-hidden="true">05</span>
+          <h3 class="chip__name">School sports kits</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>899</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20School%20sports%20kits%20(%E2%82%B9899).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-shorts">
+          <span class="chip__num" aria-hidden="true">06</span>
+          <h3 class="chip__name">Shorts</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>299</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Shorts%20(%E2%82%B9299).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-socks">
+          <span class="chip__num" aria-hidden="true">07</span>
+          <h3 class="chip__name">Socks pack</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>199</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Socks%20pack%20(%E2%82%B9199).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip" data-od-id="stock-chip-bags">
+          <span class="chip__num" aria-hidden="true">08</span>
+          <h3 class="chip__name">Bags</h3>
+          <p class="chip__price"><span class="chip__rupee">₹</span>799</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20details%20for%20Bags%20(%E2%82%B9799).">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="chip chip--ask" data-od-id="stock-chip-ask">
+          <p class="chip__q">Not seeing it?</p>
+          <p>Ask on WhatsApp for today's stock and sizes.</p>
+          <a class="chip__link" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20today%27s%20stock%20and%20sizes.">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ORDERS ============ -->
+  <section class="band--volt" id="teams" data-od-id="teams-section">
+    <span class="teams__ghost" aria-hidden="true">Bulk</span>
+    <div class="wrap teams__grid">
+      <div>
+        <p class="eyebrow" data-od-id="teams-eyebrow"><span class="eyebrow__num">02</span> Team orders</p>
+        <h2 data-od-id="teams-heading">Team jerseys with name &amp; number</h2>
+        <p class="teams__sub" data-od-id="teams-sub">Bulk orders for schools, colleges, offices.</p>
+        <p class="teams__tags" data-od-id="teams-tags">Name print · Number print · Bulk team sets</p>
+      </div>
+      <div class="teams__cta">
+        <a class="btn btn--ink" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20I%20want%20bulk%20team%20jerseys%20with%20name%20and%20number%20printing." data-od-id="teams-whatsapp-cta">WhatsApp about bulk orders</a>
+        <small>Share your team size on WhatsApp for a quote.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY GANESH ============ -->
+  <section class="section section--dark" id="why" data-od-id="why-section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-od-id="why-eyebrow"><span class="eyebrow__num">03</span> Why Ganesh</p>
+          <h2 data-od-id="why-heading">The home scoreboard</h2>
+        </div>
+        <p class="section__note" data-od-id="why-note">Original stock · Free alterations · Exchange friendly — rated 4.9 stars on Google.</p>
+      </div>
+
+      <div class="scoreboard" role="list" data-od-id="why-scoreboard">
+        <div class="stat stat--accent" role="listitem" data-od-id="why-stat-rating">
+          <p class="stat__value">4.9<span class="star" aria-hidden="true">★</span></p>
+          <p class="stat__label">From 683 Google reviews</p>
+        </div>
+        <div class="stat" role="listitem" data-od-id="why-stat-stock">
+          <p class="stat__value">Original</p>
+          <p class="stat__label">Branded stock</p>
+        </div>
+        <div class="stat" role="listitem" data-od-id="why-stat-alteration">
+          <p class="stat__value">Free</p>
+          <p class="stat__label">Alterations</p>
+        </div>
+        <div class="stat" role="listitem" data-od-id="why-stat-exchange">
+          <p class="stat__value">Easy</p>
+          <p class="stat__label">Exchange-friendly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section section--paper" id="reviews" data-od-id="reviews-section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-od-id="reviews-eyebrow"><span class="eyebrow__num">04</span> Reviews</p>
+          <h2 data-od-id="reviews-heading">What customers say</h2>
+        </div>
+        <p class="section__note" data-od-id="reviews-note">Rated 4.9 by 683 people on Google.</p>
+      </div>
+
+      <div class="review-grid">
+        <figure class="review" data-od-id="review-quote-1">
+          <span class="review__mark" aria-hidden="true">“</span>
+          <blockquote>Ordered jerseys for our whole cricket team — names and numbers printed, ready before our Sunday match.</blockquote>
+          <figcaption>Team captain · local cricket side</figcaption>
+        </figure>
+        <figure class="review" data-od-id="review-quote-2">
+          <span class="review__mark" aria-hidden="true">“</span>
+          <blockquote>Been buying shoes and track pants here for years. They always remember my size.</blockquote>
+          <figcaption>Regular customer · Dilsukhnagar</figcaption>
+        </figure>
+      </div>
+      <p class="reviews__footnote" data-od-id="reviews-footnote">The 4.9 rating and review count come from the shop's Google listing. The quotes above are sample copy written for this demo website.</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / VISIT ============ -->
+  <section class="section section--dark" id="visit" data-od-id="visit-section">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-od-id="visit-eyebrow"><span class="eyebrow__num">05</span> Visit</p>
+          <h2 data-od-id="visit-heading">Come by, call, or chat</h2>
+        </div>
+        <p class="section__note" data-od-id="visit-note">Ganesh Sportswear — sports clothing &amp; footwear: jerseys, track pants, shoes, gym wear, school sports kits.</p>
+      </div>
+
+      <div class="visit__grid">
+        <div>
+          <dl class="detail-list" data-od-id="visit-details">
+            <div class="detail-row">
+              <dt>Address</dt>
+              <dd data-od-id="visit-address">Shop No. 28, near Chaitanyapuri Main Road (Metro pillar A1563), Dilsukhnagar, Hyderabad 500060</dd>
+            </div>
+            <div class="detail-row">
+              <dt>Phone</dt>
+              <dd data-od-id="visit-phone"><a class="link-underline" href="tel:+919885450622">+91 98854 50622</a></dd>
+            </div>
+            <div class="detail-row">
+              <dt>Hours</dt>
+              <dd data-od-id="visit-hours">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="vertical-align:-2px;margin-right:.4rem">
+                  <circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8 4.4V8l2.4 1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>Call for today's hours
+              </dd>
+            </div>
+            <div class="detail-row">
+              <dt>Map</dt>
+              <dd data-od-id="visit-map">
+                <a class="link-underline" href="https://maps.google.com/?q=Ganesh+Sportswear+Dilsukhnagar+Hyderabad" target="_blank" rel="noopener">
+                  <svg width="15" height="18" viewBox="0 0 15 18" fill="none" aria-hidden="true">
+                    <path d="M7.5 1.2c-3 0-5.4 2.4-5.4 5.3 0 3.9 5.4 10.2 5.4 10.2s5.4-6.3 5.4-10.2c0-2.9-2.4-5.3-5.4-5.3Z" stroke="currentColor" stroke-width="1.6"/>
+                    <circle cx="7.5" cy="6.5" r="1.9" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                  Open in Google Maps
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="visit__ctas">
+            <a class="btn btn--volt" href="tel:+919885450622" data-od-id="visit-call-cta">Call +91 98854 50622</a>
+            <a class="btn btn--ghost" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20what%20are%20today%27s%20opening%20hours%3F" data-od-id="visit-whatsapp-cta">Chat on WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="pillar" data-od-id="visit-pillar" aria-label="Landmark">
+          <p class="pillar-num" aria-hidden="true">A1563</p>
+          <p class="pillar__cap">Metro pillar · Chaitanyapuri road</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-od-id="site-footer">
+  <div class="wrap footer__grid">
+    <div>
+      <p class="footer__line">Ganesh Sportswear · Dilsukhnagar</p>
+    </div>
+    <p class="footer__credit">Free demo website made by Grafick Signs, Hyderabad — <a class="link-underline" href="https://grafick.space" target="_blank" rel="noopener">grafick.space</a></p>
+    <p class="footer__copy">© 2026 Ganesh Sportswear</p>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick contact" data-od-id="mobile-action-bar">
+  <a class="mb-call" href="tel:+919885450622" aria-label="Call Ganesh Sportswear">Call</a>
+  <a class="mb-wa" href="https://wa.me/919885450622?text=Hi%20Ganesh%20Sportswear%2C%20please%20share%20today%27s%20stock." aria-label="WhatsApp Ganesh Sportswear">WhatsApp</a>
+</nav>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  if (!toggle || !nav) return;
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  toggle.addEventListener('click', function () {
+    setOpen(!nav.classList.contains('is-open'));
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
