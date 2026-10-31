@@ -3,469 +3,589 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahendra Mithaiwala — Pure Ghee Mithai Since 1960 | Sainikpuri, Secunderabad</title>
-<meta name="description" content="Mahendra Mithaiwala, sweet shop since 1960. Pure ghee mithai in Sainikpuri, Secunderabad. Kaju Katli, Motichoor Laddu, Jalebi and more. Call 095057 99111.">
+<title>Mahendra Mithaiwala — Pure Ghee Sweets Since 1960 | Sainikpuri, Secunderabad</title>
+<meta name="description" content="Mahendra Mithaiwala, sweet shop since 1960. Pure-ghee Kaju Katli, Motichoor Laddu, Mysore Pak, Jalebi, Rasgulla and Dry Fruit Mixture. Plot 184 Sainikpuri Rd, Vayupuri, Sainikpuri, Secunderabad 500094. Call 095057 99111.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FFF8E8;
   --surface:#FFFDF4;
-  --fg:#3B1F1A;
+  --fg:#2A1512;
   --muted:#8A6F5C;
   --border:#C9A227;
-  --maroon:#7A1E1E;
-  --maroon-deep:#5E1414;
+  --accent:#C9A227;
+  --maroon:#5E1414;
+  --maroon-deep:#421010;
+  --maroon-soft:#7A1E1E;
   --gold:#C9A227;
-  --gold-soft:#EAD88F;
+  --gold-hi:#EAD88F;
   --gold-pale:#F7ECC8;
-  --leaf:#2C6E49;
-  --font-display:"Playfair Display",Georgia,"Times New Roman",serif;
-  --font-body:"Karla",-apple-system,"Segoe UI",Roboto,sans-serif;
-  --shadow:0 12px 32px rgba(122,30,30,.10);
-  --radius:18px;
+  --cream:#FFF8E8;
+  --font-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --font-body:"Jost",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --shadow:0 18px 44px rgba(94,20,20,.14);
+  --radius:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+::selection{background:var(--maroon);color:var(--gold-hi)}
 
-/* ---------- Top bar ---------- */
-.topbar{background:var(--maroon);color:var(--gold-soft);font-size:13px;letter-spacing:.02em}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px}
-.topbar .loc{display:flex;align-items:center;gap:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.topbar .loc svg{flex:none}
-.topbar .since{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:11.5px;color:var(--gold)}
-.topbar .sep{opacity:.5;margin:0 8px}
-.topbar-call{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:4px 14px;font-weight:700;font-size:13px;color:#fff;text-decoration:none;transition:background .2s,border-color .2s}
-.topbar-call:hover{background:rgba(201,162,39,.18);border-color:var(--gold)}
-@media(max-width:640px){.topbar .addr-full{display:none}}
+/* focus */
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
 
-/* ---------- Header ---------- */
-.site-header{background:var(--surface);border-bottom:1px solid rgba(201,162,39,.45);position:sticky;top:0;z-index:50}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:12px;padding-bottom:12px}
+/* eyebrow */
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:12.5px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.eyebrow .rule{width:44px;height:1px;background:var(--gold);flex:none}
+.eyebrow.center{justify-content:center}
+
+/* diamond divider */
+.divider{display:flex;align-items:center;gap:12px;justify-content:center;margin:18px auto 0}
+.divider::before,.divider::after{content:"";height:1px;width:min(180px,28vw);background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.divider .dia{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);flex:none}
+.divider .dia.small{width:5px;height:5px;opacity:.6}
+
+/* jaali pattern band */
+.jaali{height:34px;background-color:var(--maroon);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='34' viewBox='0 0 48 34'%3E%3Cg fill='none' stroke='%23C9A227' stroke-opacity='.38' stroke-width='1'%3E%3Cpath d='M12 4 L20 17 L12 30 L4 17 Z'/%3E%3Cpath d='M36 4 L44 17 L36 30 L28 17 Z'/%3E%3Ccircle cx='24' cy='17' r='2'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat;background-position:center}
+.jaali.on-cream{background-color:transparent;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='34' viewBox='0 0 48 34'%3E%3Cg fill='none' stroke='%23941414' stroke-opacity='.14' stroke-width='1'%3E%3Cpath d='M12 4 L20 17 L12 30 L4 17 Z'/%3E%3Cpath d='M36 4 L44 17 L36 30 L28 17 Z'/%3E%3Ccircle cx='24' cy='17' r='2'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ---------- 1 top utility bar ---------- */
+.topbar{background:var(--maroon-deep);color:var(--gold-hi);font-size:13px;letter-spacing:.04em}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:8px;padding-bottom:8px}
+.topbar .left{display:flex;align-items:center;gap:10px;min-width:0}
+.topbar .since{font-weight:600;letter-spacing:.26em;text-transform:uppercase;font-size:11px;color:var(--gold);white-space:nowrap}
+.topbar .dot{opacity:.45}
+.topbar .addr{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.92}
+.topbar .right{display:flex;align-items:center;gap:16px;flex:none}
+.topbar a.tel{color:#fff;text-decoration:none;font-weight:600;letter-spacing:.05em;display:inline-flex;align-items:center;gap:7px}
+.topbar a.tel:hover{color:var(--gold-hi)}
+@media(max-width:700px){.topbar .addr{display:none}}
+
+/* ---------- 2 sticky header ---------- */
+.site-header{background:rgba(255,248,232,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,39,.55);position:sticky;top:0;z-index:60}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:11px;padding-bottom:11px}
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
-.brand-mark{width:52px;height:52px;flex:none}
-.brand-name{font-family:var(--font-display);font-weight:800;font-size:23px;line-height:1.1;color:var(--maroon);letter-spacing:-.01em}
-.brand-sub{font-size:10.5px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-.brand-sub::before{content:"";display:inline-block;width:22px;height:1px;background:var(--gold);vertical-align:middle;margin-right:8px}
+.brand-mono{width:50px;height:50px;flex:none;display:grid;place-items:center;background:var(--maroon);color:var(--gold-hi);font-family:var(--font-display);font-size:27px;font-weight:700;transform:rotate(45deg);border:1.5px solid var(--gold);border-radius:8px;box-shadow:inset 0 0 0 3px var(--maroon),inset 0 0 0 4px rgba(201,162,39,.7)}
+.brand-mono span{transform:rotate(-45deg);line-height:1}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.05;color:var(--maroon);letter-spacing:.01em}
+.brand-sub{font-size:10px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 .main-nav{display:flex;align-items:center;gap:26px}
-.main-nav a.nav-link{text-decoration:none;font-weight:600;font-size:15px;color:var(--fg);letter-spacing:.02em;position:relative;padding:4px 0}
-.main-nav a.nav-link::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .25s}
+.main-nav a.nav-link{text-decoration:none;font-weight:500;font-size:15.5px;letter-spacing:.06em;color:var(--fg);position:relative;padding:4px 0}
+.main-nav a.nav-link::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--gold);transition:width .25s}
 .main-nav a.nav-link:hover::after{width:100%}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:700;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s;letter-spacing:.02em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:600;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s,color .2s;letter-spacing:.05em;font-family:var(--font-body)}
 .btn:active{transform:translateY(2px)}
-.btn-gold{background:var(--gold);color:#3B1F1A;font-size:15px;padding:11px 26px;box-shadow:0 6px 18px rgba(201,162,39,.35)}
-.btn-gold:hover{background:#B8931F;box-shadow:0 8px 22px rgba(201,162,39,.45)}
-.btn-maroon{background:var(--maroon);color:#fff;font-size:15px;padding:12px 26px}
-.btn-maroon:hover{background:var(--maroon-deep)}
-.btn-outline{border-color:var(--maroon);color:var(--maroon);background:transparent;font-size:15px;padding:11px 26px}
-.btn-outline:hover{background:var(--maroon);color:#fff}
-.btn-wa{background:#1FA855;color:#fff;font-size:15px;padding:12px 26px}
-.btn-wa:hover{background:#178241}
-.btn:focus-visible,.topbar-call:focus-visible,.main-nav a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-gold{background:var(--gold);color:#2A1512;font-size:15px;padding:11px 28px;box-shadow:0 6px 18px rgba(201,162,39,.35)}
+.btn-gold:hover{background:#b28d1e;box-shadow:0 8px 24px rgba(201,162,39,.45)}
+.btn-cream-outline{border-color:rgba(234,216,143,.8);color:#FFF8E8;background:transparent;font-size:15px;padding:11px 28px}
+.btn-cream-outline:hover{background:rgba(234,216,143,.16);border-color:var(--gold-hi)}
 @media(max-width:900px){.main-nav{gap:16px}.main-nav a.nav-link{font-size:14px}}
-@media(max-width:760px){.main-nav a.nav-link{display:none}.site-header .wrap{gap:12px}.brand-name{font-size:19px}}
+@media(max-width:760px){.main-nav a.nav-link{display:none}.brand-name{font-size:20px}}
 
-/* ---------- Hero ---------- */
-.hero{padding:40px 0 8px}
-.hero-grid{display:grid;grid-template-columns:400px 1fr;gap:28px;align-items:stretch}
-@media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
-.hero-card{background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius);padding:34px 32px 30px;position:relative;box-shadow:var(--shadow)}
-.hero-card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.55);border-radius:12px;pointer-events:none}
-.hero-eyebrow{display:flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.hero-eyebrow .rule{width:34px;height:1px;background:var(--gold)}
-.hero-card h1{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4vw,46px);line-height:1.12;letter-spacing:-.02em;color:var(--maroon);margin:14px 0 12px}
-.hero-card h1 em{font-style:italic;font-weight:500}
-.hero-sub{font-size:16.5px;color:var(--fg);max-width:38ch}
-.hero-sub strong{color:var(--maroon)}
-.hero-ctas{display:flex;gap:12px;margin:22px 0 18px;flex-wrap:wrap}
-.hero-ctas .btn{flex:1;min-width:150px}
-.rating-badge{display:inline-flex;align-items:center;gap:9px;background:#EDF6F0;border:1px solid rgba(44,110,73,.35);border-radius:999px;padding:7px 16px 7px 9px;font-size:13.5px;font-weight:600;color:#1d4a32}
-.rating-badge .stars{display:inline-flex;align-items:center;gap:2px;background:var(--leaf);color:#fff;border-radius:999px;padding:3px 10px;font-weight:700;font-size:13px;letter-spacing:.02em}
-.rating-badge .stars svg{margin-right:2px}
-.hero-note{margin-top:14px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
-.hero-note svg{flex:none}
+/* ---------- 3 hero ---------- */
+.hero{position:relative;background:var(--maroon-deep)}
+.hero-banner{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden}
+.hero-banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(46,10,10,.94) 0%,rgba(66,16,16,.9) 34%,rgba(66,16,16,.55) 58%,rgba(66,16,16,.12) 82%,rgba(66,16,16,.05) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-copy{max-width:640px;padding:64px 0 120px}
+.hero-copy .eyebrow{color:var(--gold-hi)}
+.hero-copy .eyebrow .rule{background:var(--gold-hi)}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(48px,6.2vw,72px);line-height:1.04;letter-spacing:-.015em;color:#FFF8E8;margin:20px 0 18px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold-hi)}
+.hero-sub{font-size:18px;line-height:1.65;color:rgba(255,248,232,.88);max-width:34em;font-weight:400}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-meta{display:flex;align-items:center;gap:12px;margin-top:26px;color:rgba(234,216,143,.9);font-size:14px;letter-spacing:.08em}
+.hero-meta .stars{color:var(--gold-hi);letter-spacing:.18em;font-size:13px}
+.hero-rating-card{position:absolute;z-index:3;left:0;right:0;bottom:-46px}
+.rating-card{max-width:1200px;margin:0 auto;padding:0 26px}
+.rating-card-in{background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;align-items:center;gap:26px;padding:18px 28px;position:relative}
+.rating-card-in::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,162,39,.5);border-radius:10px;pointer-events:none}
+.rc-block{display:flex;align-items:center;gap:14px}
+.rc-score{font-family:var(--font-display);font-size:44px;font-weight:700;color:var(--maroon);line-height:1}
+.rc-stars{color:var(--gold);font-size:15px;letter-spacing:.14em}
+.rc-note{font-size:13.5px;color:var(--muted);letter-spacing:.04em}
+.rc-sep{width:1px;align-self:stretch;background:linear-gradient(180deg,transparent,var(--gold),transparent)}
+.rc-fresh{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;letter-spacing:.06em;color:var(--maroon)}
+.rc-fresh svg{flex:none}
+.rc-right{margin-left:auto;display:flex;align-items:center;gap:12px;font-size:13.5px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.rc-right strong{color:var(--maroon);letter-spacing:.22em}
+@media(max-width:860px){.hero-banner{min-height:560px}.hero-copy{padding:52px 0 130px}.rating-card-in{flex-wrap:wrap;gap:14px}.rc-sep{display:none}.rc-right{margin-left:0}}
 
-/* right column */
-.hero-media{display:flex;flex-direction:column;gap:18px;min-width:0}
-.banner-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--gold);background:var(--gold-pale);box-shadow:var(--shadow);position:relative}
-.banner-card img{width:100%;height:340px;object-fit:cover;background:var(--bg)}
-@media(max-width:960px){.banner-card img{height:260px}}
-.banner-flag{position:absolute;left:18px;bottom:18px;background:rgba(255,253,244,.96);border:1px solid var(--gold);border-radius:12px;padding:10px 18px 10px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 22px rgba(59,31,26,.18)}
-.banner-flag .dot{width:10px;height:10px;border-radius:50%;background:var(--leaf);flex:none;box-shadow:0 0 0 4px rgba(44,110,73,.18)}
-.banner-flag strong{font-family:var(--font-display);font-size:16px;color:var(--maroon);display:block;line-height:1.2}
-.banner-flag span{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.04em}
-.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:560px){.mini-grid{grid-template-columns:1fr 1fr}.mini-grid .mini-card:last-child{grid-column:1/-1}}
-.mini-card{background:var(--surface);border:1px solid rgba(201,162,39,.55);border-radius:14px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.mini-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.mini-card img{width:100%;height:120px;object-fit:cover;background:var(--gold-pale)}
-.mini-card .mini-body{padding:10px 14px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px}
-.mini-card strong{font-family:var(--font-display);font-size:15px;color:var(--maroon)}
-.mini-card .price{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
+/* ---------- 4 gold trust band ---------- */
+.trust{background:linear-gradient(180deg,var(--gold-hi),#f3e2a4);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);margin-top:46px}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:20px;padding-bottom:20px}
+.trust-item{text-align:center;padding:6px 12px;position:relative}
+.trust-item+.trust-item::before{content:"";position:absolute;left:0;top:15%;bottom:15%;width:1px;background:rgba(94,20,20,.28)}
+.trust-num{font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--maroon);line-height:1.1}
+.trust-label{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#6b4a12;margin-top:5px}
+@media(max-width:700px){.trust .wrap{grid-template-columns:repeat(2,1fr);row-gap:14px}.trust-item:nth-child(3)::before{display:none}}
 
-/* ---------- Trust band ---------- */
-.trust{margin:34px 0 0;border-top:1px solid rgba(201,162,39,.5);border-bottom:1px solid rgba(201,162,39,.5);background:var(--surface)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:22px;padding-bottom:22px;gap:18px}
-.trust-item{display:flex;align-items:center;gap:14px;justify-content:center}
-.trust-item + .trust-item{border-left:1px solid rgba(201,162,39,.4)}
-.trust-num{font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--maroon);line-height:1;letter-spacing:-.02em}
-.trust-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.5}
-@media(max-width:760px){.trust .wrap{grid-template-columns:1fr 1fr;gap:16px}.trust-item + .trust-item{border-left:none}.trust-item{justify-content:flex-start}}
+/* ---------- 5 sweets ---------- */
+.sweets{padding:84px 0 70px;position:relative}
+.sweets-head{text-align:center;max-width:640px;margin:0 auto}
+.sweets-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(36px,4.4vw,52px);line-height:1.08;letter-spacing:-.01em;color:var(--maroon);margin-top:16px}
+.sweets-head h2 em{font-style:italic;font-weight:500}
+.sweets-head p{color:var(--muted);margin-top:14px;font-size:17px}
+.sweet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:48px}
+.sweet-card{background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.sweet-card:hover{transform:translateY(-5px);box-shadow:0 26px 54px rgba(94,20,20,.2)}
+.sweet-card::after{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.5);border-radius:10px;pointer-events:none}
+.sweet-photo{position:relative;height:260px;overflow:hidden;background:var(--gold-pale)}
+.sweet-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.sweet-card:hover .sweet-photo img{transform:scale(1.045)}
+.tag-chip{position:absolute;top:14px;left:14px;z-index:2;background:rgba(46,10,10,.88);color:var(--gold-hi);font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:1px solid rgba(201,162,39,.7)}
+.sweet-body{padding:24px 24px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.sweet-name{font-family:var(--font-display);font-size:27px;font-weight:700;color:var(--maroon);line-height:1.15}
+.sweet-desc{font-size:15px;color:var(--muted);line-height:1.6}
+.price-row{display:flex;align-items:baseline;gap:10px;margin-top:6px;border-top:1px solid rgba(201,162,39,.4);padding-top:14px}
+.price{font-family:var(--font-display);font-size:25px;font-weight:700;color:var(--maroon)}
+.per-piece{font-size:13.5px;color:var(--muted)}
+.order-link{margin-top:8px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--maroon-soft);text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:2px;width:fit-content}
+.order-link:hover{color:var(--maroon);border-color:var(--maroon)}
+@media(max-width:960px){.sweet-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sweet-grid{grid-template-columns:1fr}.sweet-photo{height:240px}}
 
-/* ---------- Sections ---------- */
-.section{padding:64px 0 8px}
-.section-head{text-align:center;max-width:640px;margin:0 auto 34px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-.eyebrow::before,.eyebrow::after{content:"";width:30px;height:1px;background:var(--gold)}
-.section-head h2{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.15;color:var(--maroon);margin:12px 0 10px}
-.section-head p{color:var(--muted);font-size:16px;max-width:55ch;margin:0 auto}
+/* ---------- 6 craft + testimonials ---------- */
+.craft{background:var(--surface);border-top:1px solid rgba(201,162,39,.5);border-bottom:1px solid rgba(201,162,39,.5);padding:76px 0 70px;position:relative}
+.craft-head{text-align:center;max-width:620px;margin:0 auto}
+.craft-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(34px,4vw,48px);color:var(--maroon);margin-top:16px;line-height:1.1}
+.craft-head h2 em{font-style:italic;font-weight:500}
+.craft-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.step{background:var(--bg);border:1px solid rgba(201,162,39,.6);border-radius:var(--radius);padding:30px 28px;text-align:center;position:relative}
+.step::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,162,39,.4);border-radius:10px;pointer-events:none}
+.step-num{font-family:var(--font-display);font-style:italic;font-size:46px;font-weight:600;color:var(--gold);line-height:1}
+.step h3{font-family:var(--font-display);font-size:23px;font-weight:700;color:var(--maroon);margin:12px 0 8px}
+.step p{font-size:15px;color:var(--muted);line-height:1.65}
+.testi{margin-top:60px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:30px}
+.quote-card{background:var(--maroon);color:#FFF3D6;border-radius:var(--radius);padding:30px 28px;position:relative;border:1px solid rgba(201,162,39,.65);box-shadow:var(--shadow)}
+.quote-card::before{content:"\201C";position:absolute;top:6px;left:22px;font-family:var(--font-display);font-size:64px;color:rgba(201,162,39,.55);line-height:1}
+.quote-stars{color:var(--gold-hi);letter-spacing:.2em;font-size:13px;margin-bottom:12px}
+.quote-card p{font-family:var(--font-display);font-style:italic;font-size:19.5px;line-height:1.55;color:#FFF8E8}
+.quote-name{margin-top:16px;font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-hi)}
+@media(max-width:860px){.craft-steps,.testi-grid{grid-template-columns:1fr}}
 
-/* sweets grid */
-.sweets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:900px){.sweets-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.sweets-grid{grid-template-columns:1fr}}
-.sweet-card{background:var(--surface);border:1px solid rgba(201,162,39,.55);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.sweet-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.sweet-photo{position:relative;background:var(--gold-pale)}
-.sweet-photo img{width:100%;height:210px;object-fit:cover;background:var(--bg)}
-.sweet-tag{position:absolute;top:12px;left:12px;background:var(--leaf);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:4px 12px}
-.sweet-tag.gold{background:var(--gold);color:#3B1F1A}
-.sweet-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
-.sweet-body h3{font-family:var(--font-display);font-size:21px;font-weight:700;color:var(--maroon);letter-spacing:-.01em}
-.sweet-desc{font-size:14.5px;color:var(--muted)}
-.sweet-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:14px;border-top:1px dashed rgba(201,162,39,.6)}
-.sweet-price{font-weight:700;font-size:17px;color:var(--fg)}
-.sweet-price small{font-weight:600;color:var(--muted);font-size:13px}
-.wa-link{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;color:var(--leaf);text-decoration:none;border-bottom:2px solid rgba(44,110,73,.3);padding-bottom:1px}
-.wa-link:hover{border-color:var(--leaf)}
+/* ---------- 7 festive bulk band ---------- */
+.festive{background:var(--maroon);color:#FFF3D6;position:relative;overflow:hidden}
+.festive .wrap{position:relative;z-index:2;padding-top:76px;padding-bottom:76px;text-align:center}
+.festive .eyebrow{justify-content:center;color:var(--gold-hi)}
+.festive .eyebrow .rule{background:var(--gold-hi)}
+.festive h2{font-family:var(--font-display);font-weight:600;font-size:clamp(36px,4.6vw,54px);line-height:1.1;margin-top:16px;color:#FFF8E8}
+.festive h2 em{font-style:italic;color:var(--gold-hi);font-weight:500}
+.festive-sub{max-width:44em;margin:16px auto 0;color:rgba(255,248,232,.85);font-size:17px;line-height:1.65}
+.festive-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.festive-pills span{border:1px solid rgba(234,216,143,.6);color:var(--gold-hi);border-radius:999px;padding:8px 20px;font-size:14px;letter-spacing:.1em;font-weight:500}
+.festive-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;margin-top:26px;font-size:15.5px;color:rgba(255,248,232,.92);letter-spacing:.03em}
+.festive-facts strong{color:var(--gold-hi);font-weight:600}
+.festive-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}
+.festive-bg-pattern{position:absolute;inset:0;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23EAD88F' stroke-width='1'%3E%3Cpath d='M36 8 L52 36 L36 64 L20 36 Z'/%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3Cpath d='M0 36 H14 M58 36 H72 M36 0 V10 M36 62 V72'/%3E%3C/g%3E%3C/svg%3E")}
 
-/* ---------- Festive band ---------- */
-.festive{background:var(--maroon);border-radius:22px;margin:64px 0 0;position:relative;overflow:hidden}
-.festive::before{content:"";position:absolute;inset:10px;border:1px solid rgba(201,162,39,.5);border-radius:15px;pointer-events:none}
-.festive .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;padding:52px 54px;align-items:center;position:relative}
-@media(max-width:860px){.festive .inner{grid-template-columns:1fr;padding:40px 28px}}
-.festive h2{font-family:var(--font-display);font-size:clamp(26px,3vw,36px);line-height:1.18;letter-spacing:-.01em;color:var(--gold-soft);margin:10px 0 12px}
-.festive .kicker{font-size:11.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
-.festive p{color:rgba(255,248,232,.85);font-size:15.5px;max-width:46ch}
-.occasion-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px}
-@media(max-width:520px){.occasion-list{grid-template-columns:1fr}}
-.occasion{display:flex;align-items:center;gap:11px;background:rgba(255,248,232,.07);border:1px solid rgba(201,162,39,.45);border-radius:12px;padding:12px 14px;color:#FFF8E8;font-size:14px;font-weight:600}
-.occasion svg{flex:none;color:var(--gold)}
-.festive .btn-gold{box-shadow:none}
-.festive-side{background:rgba(255,248,232,.06);border:1px solid rgba(201,162,39,.45);border-radius:14px;padding:26px}
-.festive-side h3{font-family:var(--font-display);color:var(--gold-soft);font-size:20px;margin-bottom:6px}
-.festive-side p{font-size:14px;color:rgba(255,248,232,.8);margin-bottom:16px}
-.bulk-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed rgba(201,162,39,.4);font-size:14.5px;color:#FFF8E8}
-.bulk-row:last-of-type{border-bottom:none;margin-bottom:18px}
-.bulk-row strong{color:var(--gold-soft)}
+/* ---------- 8 visit + footer ---------- */
+.visit{padding:80px 0 70px}
+.visit-head{text-align:center;max-width:600px;margin:0 auto}
+.visit-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(34px,4vw,48px);color:var(--maroon);margin-top:16px;line-height:1.1}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:44px;align-items:stretch}
+.info-card{background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius);padding:38px 36px;position:relative;box-shadow:var(--shadow)}
+.info-card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.5);border-radius:10px;pointer-events:none}
+.info-card h3{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--maroon);margin-bottom:6px}
+.info-row{display:flex;gap:13px;align-items:flex-start;margin-top:18px;font-size:15.5px;line-height:1.6}
+.info-row svg{flex:none;margin-top:3px;color:var(--maroon-soft)}
+.info-row a{color:var(--maroon-soft);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
+.info-row a:hover{color:var(--maroon)}
+.hours{margin-top:20px;background:var(--bg);border:1px dashed rgba(201,162,39,.7);border-radius:10px;padding:14px 18px;font-size:14.5px;color:var(--muted)}
+.hours strong{color:var(--maroon)}
+.find-card{background:var(--maroon);border:1px solid var(--gold);border-radius:var(--radius);padding:38px 36px;color:#FFF3D6;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+.find-card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(234,216,143,.5);border-radius:10px;pointer-events:none}
+.find-card h3{font-family:var(--font-display);font-size:30px;font-weight:600;color:#FFF8E8}
+.find-card h3 em{font-style:italic;color:var(--gold-hi)}
+.find-card p{margin-top:10px;color:rgba(255,248,232,.85);font-size:15.5px;max-width:26em}
+.btn-big-maps{margin-top:24px;background:var(--gold);color:#2A1512;font-size:16px;font-weight:700;padding:15px 32px;border-radius:999px;width:fit-content;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.btn-big-maps:hover{background:var(--gold-hi)}
+.find-note{margin-top:16px;font-size:13.5px;letter-spacing:.06em;color:rgba(234,216,143,.85)}
+.footer{background:var(--maroon-deep);color:rgba(255,248,232,.85)}
+.footer .wrap.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding-top:56px;padding-bottom:44px}
+.foot-brand{font-family:var(--font-display);font-size:26px;font-weight:700;color:#FFF8E8}
+.foot-tag{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:6px 0 14px}
+.foot-text{font-size:15px;line-height:1.7;max-width:26em}
+.footer h4{font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:16px}
+.foot-links{list-style:none;display:grid;gap:10px;font-size:15px}
+.foot-links a{text-decoration:none;opacity:.9}
+.foot-links a:hover{color:var(--gold-hi)}
+.foot-contact{list-style:none;display:grid;gap:10px;font-size:15px}
+.foot-contact a{color:#FFF8E8;text-decoration:none;font-weight:600}
+.foot-contact a:hover{color:var(--gold-hi)}
+.foot-bottom{border-top:1px solid rgba(201,162,39,.35)}
+.foot-bottom .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:16px;padding-bottom:88px;font-size:13.5px;letter-spacing:.04em;color:rgba(255,248,232,.65)}
+.foot-bottom a{color:var(--gold-hi);text-decoration:none}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}.footer .wrap.foot-grid{grid-template-columns:1fr}}
 
-/* ---------- Visit ---------- */
-.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
-@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
-.visit-card{background:var(--surface);border:1px solid var(--gold);border-radius:var(--radius);padding:34px 32px;position:relative;box-shadow:var(--shadow)}
-.visit-card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.5);border-radius:12px;pointer-events:none}
-.visit-card h3{font-family:var(--font-display);font-size:24px;color:var(--maroon);margin-bottom:14px}
-.info-row{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid rgba(201,162,39,.3);font-size:15px}
-.info-row:last-child{border-bottom:none}
-.info-row svg{flex:none;margin-top:3px;color:var(--maroon)}
-.info-row strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
-.visit-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.visit-ctas .btn{flex:1;min-width:140px;font-size:14px;padding:11px 18px}
-.map-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--gold);background:var(--maroon-deep);display:flex;flex-direction:column;min-height:340px}
-.map-ph{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:44px 30px;background:radial-gradient(ellipse at 50% 30%,#8a2a2a 0%,var(--maroon-deep) 70%)}
-.map-ph svg{color:var(--gold)}
-.map-ph strong{font-family:var(--font-display);font-size:21px;color:var(--gold-soft)}
-.map-ph p{color:rgba(255,248,232,.75);font-size:14px;max-width:34ch}
-.map-bar{background:var(--surface);padding:16px 20px;display:flex;gap:10px;flex-wrap:wrap}
-.map-bar .btn{flex:1;min-width:150px;font-size:14px;padding:11px 18px}
+/* sticky mobile bar */
+.mobile-bar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:70;background:var(--maroon-deep);border:1px solid var(--gold);border-radius:999px;padding:8px;box-shadow:0 14px 34px rgba(0,0,0,.35);gap:8px}
+.mobile-bar a{flex:1;text-align:center;border-radius:999px;padding:13px 10px;font-weight:700;font-size:15px;text-decoration:none;letter-spacing:.03em}
+.mobile-bar .m-call{background:transparent;color:#FFF8E8;border:1px solid rgba(234,216,143,.6)}
+.mobile-bar .m-wa{background:var(--gold);color:#2A1512}
+@media(max-width:860px){.mobile-bar{display:flex}.foot-bottom .wrap{padding-bottom:110px}}
 
-/* ---------- Footer ---------- */
-footer{background:var(--maroon);color:rgba(255,248,232,.85);margin-top:64px}
-footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;padding-top:44px;padding-bottom:30px}
-@media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
-footer .f-brand{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--gold-soft)}
-footer .f-sub{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(234,216,143,.8);margin:4px 0 12px;font-weight:700}
-footer p,footer li{font-size:14px;line-height:1.7}
-footer ul{list-style:none}
-footer h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-footer a{color:#FFF8E8;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.credit{border-top:1px solid rgba(201,162,39,.35);text-align:center;padding:16px 20px 96px;font-size:13px;color:rgba(255,248,232,.7)}
-@media(min-width:769px){.credit{padding-bottom:18px}}
-.credit a{color:var(--gold-soft);font-weight:700}
-
-/* ---------- Sticky mobile bar ---------- */
-.sticky-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--surface);border-top:1px solid var(--gold);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px}
-.sticky-bar .btn{flex:1;font-size:15px;padding:13px 10px}
-@media(max-width:768px){.sticky-bar{display:flex}body{padding-bottom:70px}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .sweet-card:hover{transform:none}
+  .sweet-card:hover .sweet-photo img{transform:none}
+}
 </style>
 </head>
 <body>
 
-<!-- 1. Top bar -->
-<div class="topbar" data-od-id="top-bar">
+<!-- 1 utility bar -->
+<div class="topbar" data-od-id="utility-bar">
   <div class="wrap">
-    <div class="loc">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-      <span><span class="since">Since 1960</span><span class="sep">·</span><span class="addr-full">Sainikpuri, Secunderabad</span><span class="addr-short" style="display:none"></span></span>
+    <div class="left">
+      <span class="since">Since 1960</span>
+      <span class="dot">|</span>
+      <span class="addr">Plot 184 Sainikpuri Rd, Vayupuri, Sainikpuri, Secunderabad 500094</span>
     </div>
-    <a class="topbar-call" data-od-id="topbar-call" href="tel:+919505799111">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
-      095057 99111
-    </a>
+    <div class="right">
+      <a class="tel" href="tel:+919505799111" data-od-id="topbar-phone">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+        095057 99111
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- 2. Header nav -->
+<!-- 2 sticky header -->
 <header class="site-header" data-od-id="site-header">
   <div class="wrap">
-    <a class="brand" href="#home" data-od-id="brand-lockup" aria-label="Mahendra Mithaiwala home">
-      <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <circle cx="32" cy="32" r="30" stroke="#C9A227" stroke-width="2"/>
-        <circle cx="32" cy="32" r="24.5" stroke="#C9A227" stroke-width="1" opacity=".6"/>
-        <g stroke="#C9A227" stroke-width="1.4" opacity=".9">
-          <path d="M32 12v8M32 44v8M12 32h8M44 32h8M17.9 17.9l5.6 5.6M40.5 40.5l5.6 5.6M46.1 17.9l-5.6 5.6M23.5 40.5l-5.6 5.6"/>
-        </g>
-        <path d="M24 34c0-5 3.5-9 8-9s8 4 8 9c0 3.5-3.5 6-8 6s-8-2.5-8-6z" fill="#7A1E1E"/>
-        <ellipse cx="32" cy="31.5" rx="3.2" ry="4.4" fill="#EAD88F"/>
-        <path d="M32 24.5c-1.2-1.8-1.2-3.4 0-4.8 1.2 1.4 1.2 3 0 4.8z" fill="#C9A227"/>
-      </svg>
+    <a class="brand" href="#top" data-od-id="brand-lockup" aria-label="Mahendra Mithaiwala — home">
+      <span class="brand-mono" aria-hidden="true"><span>M</span></span>
       <span>
         <span class="brand-name">Mahendra Mithaiwala</span>
         <span class="brand-sub" style="display:block">Since 1960</span>
       </span>
     </a>
     <nav class="main-nav" aria-label="Primary" data-od-id="main-nav">
-      <a class="nav-link" href="#home">Home</a>
       <a class="nav-link" href="#sweets">Sweets</a>
-      <a class="nav-link" href="#gifting">Gift Boxes</a>
-      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#craft">Craft</a>
+      <a class="nav-link" href="#reviews">Reviews</a>
       <a class="nav-link" href="#visit">Visit</a>
-      <a class="btn btn-gold" data-od-id="order-now" href="https://wa.me/919505799111?text=Namaste%20Mahendra%20Mithaiwala%2C%20I%20would%20like%20to%20place%20an%20order.">Order Now</a>
+      <a class="btn btn-gold" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" data-od-id="header-order-now">Order Now</a>
     </nav>
   </div>
 </header>
 
-<main id="home">
-<!-- 3. Hero -->
-<section class="hero" data-od-id="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-card" data-od-id="hero-copy">
-      <div class="hero-eyebrow"><span class="rule"></span>Sainikpuri · Est. 1960</div>
-      <h1>Pure Ghee Mithai <em>Since 1960</em></h1>
-      <p class="hero-sub">Three generations of slow-cooked recipes, from morning <strong>hot jalebi</strong> to festive <strong>kaju katli</strong> — made fresh every day in Secunderabad.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-maroon" data-od-id="hero-call" href="tel:+919505799111">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
-          Call Shop
-        </a>
-        <a class="btn btn-wa" data-od-id="hero-whatsapp" href="https://wa.me/919505799111?text=Namaste%20Mahendra%20Mithaiwala%2C%20I%20would%20like%20to%20place%20an%20order.">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.5-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.5-.3z"/></svg>
-          WhatsApp
-        </a>
-      </div>
-      <span class="rating-badge" data-od-id="hero-rating">
-        <span class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>4.6</span>
-        4.6 stars · 370+ Google reviews
-      </span>
-      <p class="hero-note">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2C6E49" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
-        Fresh batches daily · Open 9 AM – 9 PM, all days
-      </p>
-    </div>
+<main id="top">
 
-    <div class="hero-media" data-od-id="hero-media">
-      <div class="banner-card" data-od-id="hero-banner">
-        <img src="img/hero.jpg" alt="Fresh festive mithai assortment at Mahendra Mithaiwala" fetchpriority="high">
-        <div class="banner-flag">
-          <span class="dot"></span>
-          <span><strong>Festive bestsellers, made today</strong><span>Finished in pure ghee · No shortcuts</span></span>
-        </div>
-      </div>
-      <div class="mini-grid" data-od-id="bestseller-row">
-        <a class="mini-card" href="#sweets">
-          <img src="img/kaju.jpg" alt="Kaju Katli" loading="lazy">
-          <span class="mini-body"><strong>Kaju Katli</strong><span class="price">Rs.720/kg</span></span>
-        </a>
-        <a class="mini-card" href="#sweets">
-          <img src="img/laddu.jpg" alt="Motichoor Laddu" loading="lazy">
-          <span class="mini-body"><strong>Laddu</strong><span class="price">Rs.280/kg</span></span>
-        </a>
-        <a class="mini-card" href="#sweets">
-          <img src="img/jalebi.jpg" alt="Hot Jalebi" loading="lazy">
-          <span class="mini-body"><strong>Hot Jalebi</strong><span class="price">Rs.240/kg</span></span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. Trust stats -->
-  <div class="trust" data-od-id="trust-band">
-    <div class="wrap">
-      <div class="trust-item"><span class="trust-num">60+</span><span class="trust-label">Years of<br>legacy</span></div>
-      <div class="trust-item"><span class="trust-num">4.6</span><span class="trust-label">Google<br>rating</span></div>
-      <div class="trust-item"><span class="trust-num">370+</span><span class="trust-label">Google<br>reviews</span></div>
-      <div class="trust-item"><span class="trust-num">500+</span><span class="trust-label">Listing<br>photos</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Signature sweets -->
-<section class="section" id="sweets" data-od-id="sweets-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Our Counter</span>
-      <h2>Signature Sweets</h2>
-      <p>Priced per kg, packed fresh to order. Tap any sweet to order it on WhatsApp.</p>
-    </div>
-    <div class="sweets-grid">
-      <article class="sweet-card" data-od-id="sweet-kaju">
-        <div class="sweet-photo"><img src="img/kaju.jpg" alt="Kaju Katli — diamond-cut cashew fudge with silver leaf" loading="lazy"><span class="sweet-tag gold">Bestseller</span></div>
-        <div class="sweet-body"><h3>Kaju Katli</h3><p class="sweet-desc">Silky cashew fudge, diamond-cut, finished with silver leaf.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.720 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Kaju%20Katli%20(Rs.720%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-      <article class="sweet-card" data-od-id="sweet-laddu">
-        <div class="sweet-photo"><img src="img/laddu.jpg" alt="Motichoor Laddu — round boondi laddus" loading="lazy"><span class="sweet-tag">Fresh daily</span></div>
-        <div class="sweet-body"><h3>Motichoor Laddu</h3><p class="sweet-desc">Fine-pearl boondi, ghee-roasted, scented with cardamom.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.280 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Motichoor%20Laddu%20(Rs.280%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-      <article class="sweet-card" data-od-id="sweet-mysore">
-        <div class="sweet-photo"><img src="img/mysore.jpg" alt="Mysore Pak — golden gram-flour fudge squares" loading="lazy"></div>
-        <div class="sweet-body"><h3>Mysore Pak</h3><p class="sweet-desc">Melt-in-mouth gram fudge, generous with ghee.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.320 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Mysore%20Pak%20(Rs.320%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-      <article class="sweet-card" data-od-id="sweet-jalebi">
-        <div class="sweet-photo"><img src="img/jalebi.jpg" alt="Jalebi — crisp saffron spirals" loading="lazy"><span class="sweet-tag">Made hot</span></div>
-        <div class="sweet-body"><h3>Jalebi</h3><p class="sweet-desc">Crisp saffron spirals, fried to order through the day.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.240 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Jalebi%20(Rs.240%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-      <article class="sweet-card" data-od-id="sweet-rasgulla">
-        <div class="sweet-photo"><img src="img/rasgulla.jpg" alt="Rasgulla — soft chenna balls in syrup" loading="lazy"></div>
-        <div class="sweet-body"><h3>Rasgulla</h3><p class="sweet-desc">Feather-light chenna balls in clear, light syrup.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.260 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Rasgulla%20(Rs.260%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-      <article class="sweet-card" data-od-id="sweet-mixture">
-        <div class="sweet-photo"><img src="img/mixture.jpg" alt="Dry Fruit Mixture — savoury namkeen with nuts" loading="lazy"></div>
-        <div class="sweet-body"><h3>Dry Fruit Mixture</h3><p class="sweet-desc">Savoury crunch with cashew, peanuts and curry leaf.</p>
-          <div class="sweet-row"><span class="sweet-price">Rs.340 <small>/ kg</small></span><a class="wa-link" href="https://wa.me/919505799111?text=Namaste%2C%20I%20want%20to%20order%20Dry%20Fruit%20Mixture%20(Rs.340%2Fkg).">Order on WhatsApp</a></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Festive + bulk -->
-<section id="gifting" data-od-id="gifting-band">
-  <div class="wrap">
-    <div class="festive">
-      <div class="inner">
-        <div>
-          <span class="kicker">Festive &amp; Bulk Orders</span>
-          <h2>Weddings, poojas &amp; corporate gifting — packed to impress.</h2>
-          <p>Custom gift boxes from 250g to 2kg, bulk laddu and mixture for functions, and counter-fresh supply for events across Secunderabad. Tell us the headcount — we will plan the kilos.</p>
-          <div class="occasion-list">
-            <div class="occasion"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Wedding orders</div>
-            <div class="occasion"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Pooja &amp; prasadam</div>
-            <div class="occasion"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Corporate gifting</div>
-            <div class="occasion"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Festival boxes</div>
+  <!-- 3 hero -->
+  <section class="hero" data-od-id="hero" aria-label="Mahendra Mithaiwala festive mithai">
+    <div class="hero-banner">
+      <img src="img/hero.jpg" alt="Wide festive spread of Mahendra Mithaiwala mithai in brass trays" fetchpriority="high" decoding="async">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="wrap">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="rule"></span>Since 1960 &mdash; Sainikpuri, Secunderabad</p>
+            <h1>Sixty Years of<br><em>Pure-Ghee Mithai.</em></h1>
+            <p class="hero-sub">Mahendra Mithaiwala has sweetened Sainikpuri mornings since 1960 — slow-cooked kaju katli, motichoor laddu and hot jalebi, packed fresh at the counter every day.</p>
+            <div class="hero-cta">
+              <a class="btn btn-gold" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" data-od-id="hero-whatsapp">Order on WhatsApp</a>
+              <a class="btn btn-cream-outline" href="tel:+919505799111" data-od-id="hero-call">Call 095057 99111</a>
+            </div>
+            <div class="hero-meta">
+              <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>4.6 &middot; 370+ Google reviews &middot; Plot 184 Sainikpuri Rd</span>
+            </div>
           </div>
-          <a class="btn btn-gold" data-od-id="bulk-whatsapp" href="https://wa.me/919505799111?text=Namaste%20Mahendra%20Mithaiwala%2C%20I%20need%20a%20bulk%20%2F%20festive%20order%20quote.">Order on WhatsApp</a>
         </div>
-        <aside class="festive-side" id="about" data-od-id="about-card">
-          <h3>Since 1960, one promise</h3>
-          <p>Pure ghee, honest weights, recipes unchanged for three generations. That is why Sainikpuri keeps coming back.</p>
-          <div class="bulk-row"><span>Gift boxes</span><strong>250g – 2kg</strong></div>
-          <div class="bulk-row"><span>Bulk functions</span><strong>10 – 500 kg</strong></div>
-          <div class="bulk-row"><span>Advance notice</span><strong>24 hrs</strong></div>
-          <a class="btn btn-gold" style="width:100%" href="tel:+919505799111">Call 095057 99111</a>
-        </aside>
       </div>
     </div>
-  </div>
-</section>
+    <div class="hero-rating-card">
+      <div class="rating-card">
+        <div class="rating-card-in" data-od-id="floating-rating-card">
+          <div class="rc-block">
+            <span class="rc-score">4.6</span>
+            <span>
+              <span class="rc-stars" aria-label="Rated 4.6 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="rc-note" style="display:block">370+ Google reviews</span>
+            </span>
+          </div>
+          <span class="rc-sep" aria-hidden="true"></span>
+          <div class="rc-fresh">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2C6E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+            <span>Pure ghee, made fresh<br style="line-height:1">daily at the counter</span>
+          </div>
+          <div class="rc-right"><strong>Since 1960</strong><span>&nbsp;&middot; Secunderabad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- 7. Visit -->
-<section class="section" id="visit" data-od-id="visit-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Find Us</span>
-      <h2>Visit the Shop</h2>
-      <p>On Sainikpuri Road — look for the maroon board and the smell of fresh ghee.</p>
+  <!-- 4 gold trust band -->
+  <section class="trust" data-od-id="trust-band" aria-label="Mahendra Mithaiwala at a glance">
+    <div class="wrap">
+      <div class="trust-item"><div class="trust-num">60+ years</div><div class="trust-label">Of mithai craft</div></div>
+      <div class="trust-item"><div class="trust-num">4.6 stars</div><div class="trust-label">Google rating</div></div>
+      <div class="trust-item"><div class="trust-num">370+ reviews</div><div class="trust-label">Happy customers</div></div>
+      <div class="trust-item"><div class="trust-num">500+ photos</div><div class="trust-label">Shared by food lovers</div></div>
     </div>
-    <div class="visit-grid">
-      <div class="visit-card" data-od-id="visit-info">
-        <h3>Mahendra Mithaiwala</h3>
-        <div class="info-row">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><strong>Address</strong>Plot 184, Sainikpuri Road, Vayupuri, Sainikpuri, Secunderabad 500094</div>
+  </section>
+
+  <!-- 5 signature sweets -->
+  <section class="sweets" id="sweets" data-od-id="signature-sweets">
+    <div class="wrap">
+      <div class="sweets-head">
+        <p class="eyebrow center"><span class="rule"></span>Signature Sweets<span class="rule"></span></p>
+        <h2>The Counter <em>Favourites</em></h2>
+        <div class="divider" aria-hidden="true"><span class="dia small"></span><span class="dia"></span><span class="dia small"></span></div>
+        <p>Every tray below is photographed at our own counter — what you see is what you take home.</p>
+      </div>
+      <div class="sweet-grid">
+
+        <article class="sweet-card" data-od-id="sweet-card-kaju">
+          <div class="sweet-photo">
+            <span class="tag-chip">Bestseller</span>
+            <img src="img/kaju.jpg" alt="Kaju Katli diamond pieces topped with silver leaf" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Kaju Katli</h3>
+            <p class="sweet-desc">Silky cashew diamonds with a whisper of silver leaf — our most gifted box since 1960.</p>
+            <div class="price-row"><span class="price">Rs. 720/kg</span><span class="per-piece">about 20 pieces per kg</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Kaju%20Katli%20(Rs.%20720%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="sweet-card" data-od-id="sweet-card-laddu">
+          <div class="sweet-photo">
+            <span class="tag-chip">Festival favourite</span>
+            <img src="img/laddu.jpg" alt="Round Motichoor Laddu piled high in a brass tray" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Motichoor Laddu</h3>
+            <p class="sweet-desc">Fine golden pearls of boondi rolled in pure ghee — soft, fragrant, never too sweet.</p>
+            <div class="price-row"><span class="price">Rs. 280/kg</span><span class="per-piece">about 28 pieces per kg</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Motichoor%20Laddu%20(Rs.%20280%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="sweet-card" data-od-id="sweet-card-mysore">
+          <div class="sweet-photo">
+            <span class="tag-chip">Ghee-rich</span>
+            <img src="img/mysore.jpg" alt="Golden Mysore Pak squares with a soft porous crumb" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Mysore Pak</h3>
+            <p class="sweet-desc">Melt-in-mouth gram-flour squares, slow-roasted in ghee till honeycombed and rich.</p>
+            <div class="price-row"><span class="price">Rs. 320/kg</span><span class="per-piece">about 24 pieces per kg</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Mysore%20Pak%20(Rs.%20320%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="sweet-card" data-od-id="sweet-card-jalebi">
+          <div class="sweet-photo">
+            <span class="tag-chip">Fried fresh</span>
+            <img src="img/jalebi.jpg" alt="Crisp saffron Jalebi spirals glistening with syrup" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Jalebi</h3>
+            <p class="sweet-desc">Crisp saffron spirals fried to order — best eaten hot, straight from the kadhai.</p>
+            <div class="price-row"><span class="price">Rs. 240/kg</span><span class="per-piece">about 30 pieces per kg</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Jalebi%20(Rs.%20240%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="sweet-card" data-od-id="sweet-card-rasgulla">
+          <div class="sweet-photo">
+            <span class="tag-chip">Light &amp; spongy</span>
+            <img src="img/rasgulla.jpg" alt="Soft white Rasgulla resting in light syrup" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Rasgulla</h3>
+            <p class="sweet-desc">Feather-light chenna balls soaked in delicate syrup — cool, soft and gentle.</p>
+            <div class="price-row"><span class="price">Rs. 260/kg</span><span class="per-piece">about 22 pieces per kg</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Rasgulla%20(Rs.%20260%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <article class="sweet-card" data-od-id="sweet-card-mixture">
+          <div class="sweet-photo">
+            <span class="tag-chip">Namkeen</span>
+            <img src="img/mixture.jpg" alt="Dry Fruit Mixture with cashews, raisins and spiced sev" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="sweet-body">
+            <h3 class="sweet-name">Dry Fruit Mixture</h3>
+            <p class="sweet-desc">Cashews, raisins and spiced sev tossed together — the savoury pause between sweets.</p>
+            <div class="price-row"><span class="price">Rs. 340/kg</span><span class="per-piece">scooped fresh per 250 g pack</span></div>
+            <a class="order-link" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20want%20to%20order%20Dry%20Fruit%20Mixture%20(Rs.%20340%2Fkg)." target="_blank" rel="noopener">Order on WhatsApp
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="jaali" aria-hidden="true"></div>
+
+  <!-- 6 craft + testimonials -->
+  <section class="craft" id="craft" data-od-id="craft">
+    <div class="wrap">
+      <div class="craft-head">
+        <p class="eyebrow center"><span class="rule"></span>The Craft<span class="rule"></span></p>
+        <h2>Unchanged Since <em>1960</em></h2>
+        <div class="divider" aria-hidden="true"><span class="dia small"></span><span class="dia"></span><span class="dia small"></span></div>
+      </div>
+      <div class="craft-steps">
+        <div class="step" data-od-id="craft-step-1">
+          <div class="step-num">01</div>
+          <h3>Slow-Cooked in Pure Ghee</h3>
+          <p>Small kadhai batches, stirred by hand over low flame — the way our founder taught us.</p>
         </div>
-        <div class="info-row">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <div><strong>Hours</strong>Open 9 AM – 9 PM, daily</div>
+        <div class="step" data-od-id="craft-step-2">
+          <div class="step-num">02</div>
+          <h3>Sweetened Just Right</h3>
+          <p>Sugar measured to lift the flavour, never mask it. Elders and children agree on this.</p>
         </div>
-        <div class="info-row">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.25a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
-          <div><strong>Phone</strong><a href="tel:+919505799111" style="font-weight:700;color:var(--maroon)">095057 99111</a></div>
-        </div>
-        <div class="visit-ctas">
-          <a class="btn btn-maroon" data-od-id="visit-call" href="tel:+919505799111">Call Shop</a>
-          <a class="btn btn-wa" data-od-id="visit-whatsapp" href="https://wa.me/919505799111?text=Namaste%20Mahendra%20Mithaiwala%2C%20I%20would%20like%20to%20place%20an%20order.">WhatsApp</a>
-          <a class="btn btn-outline" data-od-id="visit-maps" href="https://www.google.com/maps/place/Mahendra+Mithaiwala/data=!4m7!3m6!1s0x3bcb9bdffeb0f509:0x3b9b99465bd46491!8m2!3d17.4845145!4d78.548135!16s%2Fg%2F11s7fqtltt!19sChIJCfWw_t-byzsRkWTUW0aZmzs?authuser=0&rclk=1" target="_blank" rel="noopener">Google Maps</a>
+        <div class="step" data-od-id="craft-step-3">
+          <div class="step-num">03</div>
+          <h3>Packed Fresh at Counter</h3>
+          <p>Weighed and boxed while you watch, in food-safe packs that keep every piece perfect.</p>
         </div>
       </div>
-      <div class="map-card" data-od-id="visit-map">
-        <div class="map-ph">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <strong>Sainikpuri Road, Secunderabad</strong>
-          <p>Plot 184, Vayupuri — easy parking right outside the shop.</p>
+
+      <div class="testi" id="reviews" data-od-id="testimonials">
+        <div class="craft-head">
+          <p class="eyebrow center"><span class="rule"></span>370+ Google Reviews<span class="rule"></span></p>
         </div>
-        <div class="map-bar">
-          <a class="btn btn-gold" href="https://www.google.com/maps/place/Mahendra+Mithaiwala/data=!4m7!3m6!1s0x3bcb9bdffeb0f509:0x3b9b99465bd46491!8m2!3d17.4845145!4d78.548135!16s%2Fg%2F11s7fqtltt!19sChIJCfWw_t-byzsRkWTUW0aZmzs?authuser=0&rclk=1" target="_blank" rel="noopener">Open in Google Maps</a>
-          <a class="btn btn-outline" href="tel:+919505799111">Call for Directions</a>
+        <div class="testi-grid">
+          <div class="quote-card" data-od-id="quote-ramesh">
+            <div class="quote-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Kaju katli melts in the mouth. We have ordered from here for every Diwali since I was a boy.</p>
+            <div class="quote-name">Ramesh &middot; Sainikpuri</div>
+          </div>
+          <div class="quote-card" data-od-id="quote-sujatha">
+            <div class="quote-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Hot jalebi on a rainy evening — crisp, juicy, perfect. The counter staff pack it with such care.</p>
+            <div class="quote-name">Sujatha &middot; Vayupuri</div>
+          </div>
+          <div class="quote-card" data-od-id="quote-venkatesh">
+            <div class="quote-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Ordered 15 kg of laddu for a pooja. Fresh, on time, and every box looked beautiful.</p>
+            <div class="quote-name">Venkatesh &middot; Secunderabad</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- 7 festive bulk band -->
+  <section class="festive" data-od-id="festive-bulk">
+    <div class="festive-bg-pattern" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow"><span class="rule"></span>Weddings &middot; Festivals &middot; Bulk<span class="rule"></span></p>
+      <h2>Sweetness for <em>Every Occasion</em></h2>
+      <p class="festive-sub">Weddings, poojas, corporate gifting and festival boxes — Mahendra Mithaiwala prepares gift boxes from 250&nbsp;g to 2&nbsp;kg and bulk orders from 10&nbsp;kg to 500&nbsp;kg with just 24-hour notice.</p>
+      <div class="festive-pills">
+        <span>Weddings</span><span>Pooja prasadam</span><span>Corporate gifts</span><span>Festival boxes</span>
+      </div>
+      <div class="festive-facts">
+        <span>Gift boxes <strong>250 g – 2 kg</strong></span>
+        <span>Bulk orders <strong>10 kg – 500 kg</strong></span>
+        <span>Notice <strong>24 hours</strong></span>
+      </div>
+      <div class="festive-cta">
+        <a class="btn btn-gold" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20need%20a%20bulk%20%2F%20festive%20order%20quote." target="_blank" rel="noopener" data-od-id="festive-whatsapp">Get a Bulk Quote</a>
+        <a class="btn btn-cream-outline" href="tel:+919505799111" data-od-id="festive-call">Call 095057 99111</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="jaali on-cream" aria-hidden="true"></div>
+
+  <!-- 8 visit + footer -->
+  <section class="visit" id="visit" data-od-id="visit">
+    <div class="wrap">
+      <div class="visit-head">
+        <p class="eyebrow center"><span class="rule"></span>Visit Us<span class="rule"></span></p>
+        <h2>Find the Sweet Smell of Ghee</h2>
+        <div class="divider" aria-hidden="true"><span class="dia small"></span><span class="dia"></span><span class="dia small"></span></div>
+      </div>
+      <div class="visit-grid">
+        <div class="info-card" data-od-id="visit-info">
+          <h3>Mahendra Mithaiwala</h3>
+          <p style="font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)">Sweet shop since 1960</p>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Plot 184 Sainikpuri Rd, Vayupuri,<br>Sainikpuri, Secunderabad 500094</span>
+          </div>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+            <span><a href="tel:+919505799111">095057 99111</a> &nbsp;&middot;&nbsp; <a href="https://wa.me/919505799111" target="_blank" rel="noopener">WhatsApp us</a></span>
+          </div>
+          <div class="hours"><strong>Open daily:</strong> 9:00 AM – 9:30 PM &middot; Jalebi fried fresh every evening 4–8 PM</div>
+        </div>
+        <div class="find-card" data-od-id="visit-find">
+          <h3>Come, <em>taste first.</em></h3>
+          <p>Two minutes from the Sainikpuri signal. Free parking nearby — follow the smell of hot ghee and you are here.</p>
+          <a class="btn btn-big-maps" href="https://www.google.com/maps/search/?api=1&amp;query=Mahendra+Mithaiwala+Sainikpuri+Secunderabad+500094" target="_blank" rel="noopener" data-od-id="maps-button">
+            Open in Google Maps
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <p class="find-note">4.6 stars &middot; 370+ reviews on Google</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- 8. Footer -->
-<footer data-od-id="site-footer">
-  <div class="wrap">
+<footer class="footer" data-od-id="footer">
+  <div class="jaali" aria-hidden="true"></div>
+  <div class="wrap foot-grid">
     <div>
-      <div class="f-brand">Mahendra Mithaiwala</div>
-      <div class="f-sub">Since 1960</div>
-      <p>Pure ghee mithai from Sainikpuri, Secunderabad — serving families for three generations.</p>
+      <div class="foot-brand">Mahendra Mithaiwala</div>
+      <div class="foot-tag">Sweet shop since 1960</div>
+      <p class="foot-text">Pure-ghee mithai from the heart of Sainikpuri, Secunderabad — made fresh daily for three generations.</p>
     </div>
     <div>
-      <h4>Reach Us</h4>
-      <ul>
-        <li>Plot 184, Sainikpuri Rd, Vayupuri,<br>Sainikpuri, Secunderabad 500094</li>
-        <li><a href="tel:+919505799111">095057 99111</a></li>
-        <li>Open 9 AM – 9 PM, daily</li>
+      <h4>Explore</h4>
+      <ul class="foot-links">
+        <li><a href="#sweets">Signature Sweets</a></li>
+        <li><a href="#craft">Our Craft</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+        <li><a href="#visit">Visit Us</a></li>
       </ul>
     </div>
     <div>
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="#sweets">Signature sweets</a></li>
-        <li><a href="#gifting">Gift boxes &amp; bulk</a></li>
-        <li><a href="#visit">Visit us</a></li>
-        <li><a href="https://wa.me/919505799111">WhatsApp orders</a></li>
+      <h4>Contact</h4>
+      <ul class="foot-contact">
+        <li>Plot 184 Sainikpuri Rd, Vayupuri, Sainikpuri, Secunderabad 500094</li>
+        <li><a href="tel:+919505799111">095057 99111</a></li>
+        <li><a href="https://wa.me/919505799111" target="_blank" rel="noopener">WhatsApp: wa.me/919505799111</a></li>
       </ul>
     </div>
   </div>
-  <div class="credit">Website made by <a href="https://grafick.space">Grafick Signs</a> · Hanuman Tekdi, Abids, Hyderabad · grafick.space</div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <span>&copy; 2026 Mahendra Mithaiwala. All rights reserved.</span>
+      <span>Website crafted with care by <a href="https://grafick.space" target="_blank" rel="noopener">Grafick Signs, Hyderabad</a></span>
+    </div>
+  </div>
 </footer>
 
-<!-- Sticky mobile bar -->
-<div class="sticky-bar" data-od-id="sticky-bar">
-  <a class="btn btn-maroon" href="tel:+919505799111">Call Shop</a>
-  <a class="btn btn-wa" href="https://wa.me/919505799111?text=Namaste%20Mahendra%20Mithaiwala%2C%20I%20would%20like%20to%20place%20an%20order.">WhatsApp</a>
+<!-- sticky mobile call/whatsapp bar -->
+<div class="mobile-bar" data-od-id="mobile-bar">
+  <a class="m-call" href="tel:+919505799111">Call Now</a>
+  <a class="m-wa" href="https://wa.me/919505799111?text=Hello%20Mahendra%20Mithaiwala!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">WhatsApp Order</a>
 </div>
 
 <!-- Grafick watermark — inject before </body> of every demos/*/index.html (guarded on 'grafick-wm') -->
@@ -479,5 +599,6 @@ footer a:hover{text-decoration:underline}
 </style>
 <a class="grafick-wm" href="https://grafick.space" target="_blank" rel="noopener"><span class="g-dot"></span>Made by Grafick &middot; grafick.space</a>
 <div class="grafick-diag" aria-hidden="true"><span>Grafick Demo</span></div>
+
 </body>
 </html>
